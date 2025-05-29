@@ -1,0 +1,27 @@
+redis_port:
+redis_ip_bind:
+redis_dir:
+redis_host:
+result_port:
+
+postgresql_pass:
+postgresql_user:
+postgresql_db:
+postgresql_port:
+postgresql_host:
+
+to encrypt the file we use:
+ansible-vault encrypt group_vars/all.yml
+
+to decrypt the file we use:
+ansible-vault dencrypt group_vars/all.yml
+
+B-DOP-400> export ANSIBLE_VAULT_PASSWORD_FILE=/tmp/.vault_pass
+B-DOP-400> echo verySecretPassword > /tmp/.vault_pass
+
+[vms]
+vm1 ansible_host=vm1@192.168.122.59
+vm2 ansible_host=vm2@192.168.122.233
+vm3 ansible_host=vm32@192.168.122.151
+vm4 ansible_host=vm42@192.168.122.23
+vm5 ansible_host=vm52@192.168.122.51

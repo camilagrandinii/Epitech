@@ -1,0 +1,216 @@
+\doxysection{includes/\+IPizza.hpp File Reference}
+\hypertarget{IPizza_8hpp}{}\label{IPizza_8hpp}\index{includes/IPizza.hpp@{includes/IPizza.hpp}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+Include dependency graph for IPizza.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classPlazza_1_1IPizza}{Plazza\+::\+IPizza}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacePlazza}{Plazza}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{IPizza_8hpp_a5d47f0a0d64879bbfa81d29acccd8f7d}{Pizza\+Type}} \{ \mbox{\hyperlink{IPizza_8hpp_a5d47f0a0d64879bbfa81d29acccd8f7da4a339374c459be157b1be6ac7d8e6fca}{Regina}} = 1
+, \mbox{\hyperlink{IPizza_8hpp_a5d47f0a0d64879bbfa81d29acccd8f7da4931b96b11bdae6da3be91d59f819aa9}{Margarita}} = 2
+, \mbox{\hyperlink{IPizza_8hpp_a5d47f0a0d64879bbfa81d29acccd8f7da834b9fe6ca5e596ded348e9399913f47}{Americana}} = 4
+, \mbox{\hyperlink{IPizza_8hpp_a5d47f0a0d64879bbfa81d29acccd8f7da9c9bb56fe192d0b403451bd1c1f8a346}{Fantasia}} = 8
+ \}
+\item 
+enum \mbox{\hyperlink{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6}{Pizza\+Size}} \{ \newline
+\mbox{\hyperlink{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6af1ce01387d2348f8b858721a7db81670}{S}} = 1
+, \mbox{\hyperlink{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6a51ca6c63d97347ee58cc7da59ab6994b}{M}} = 2
+, \mbox{\hyperlink{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6aef31cc6fe9479955961311ee18ac205f}{L}} = 4
+, \mbox{\hyperlink{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6a54c9e44b3409eb9b91bf89ea1e321a73}{XL}} = 8
+, \newline
+\mbox{\hyperlink{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6ab88ec4bc6eb63c7e402209d5b856d461}{XXL}} = 16
+ \}
+\item 
+enum \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0}{Ingredients}} \{ \newline
+\mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0ae2bc49dcba2d6576b9a58ef8249f4534}{Dough}} = 1
+, \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0ae2df97ac698e367bd5e3cad607645778}{Tomato}} = 2
+, \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0a32155949a447db373c7dafec306ad538}{Gruyere}} = 4
+, \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0a9c019fe17d2df841ab84882fd5290b4d}{Ham}} = 8
+, \newline
+\mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0aa519e7f4050ec6d486509a07163cec63}{Mushrooms}} = 16
+, \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0aca4357b027d8642b5db6018fd4906130}{Steak}} = 32
+, \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0a7606d227ad8e65a091fe88d2b2264d5d}{Eggplant}} = 64
+, \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0a50f5546cf36f2fc8fc3de4e8dcef66bf}{Goat\+Cheese}} = 128
+, \newline
+\mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0a3d6dce953272475dea58db87b16eb2e8}{Chief\+Love}} = 256
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{IPizza_8hpp_a991e02d6f9f475482ad89504f456730c}{Basic\+Pizza\+Name\+Str}} \mbox{[}$\,$\mbox{]}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{IPizza_8hpp_ae904090a6806bf7677850486a99b04f3}{Pizza\+Size\+Str}} \mbox{[}$\,$\mbox{]}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{IPizza_8hpp_a771d5cc7af5e9b672cfecfbc894c8cc3}{Pizza\+Ingredients\+Str}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0}\label{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0} 
+\index{IPizza.hpp@{IPizza.hpp}!Ingredients@{Ingredients}}
+\index{Ingredients@{Ingredients}!IPizza.hpp@{IPizza.hpp}}
+\doxysubsubsection{\texorpdfstring{Ingredients}{Ingredients}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0}{Ingredients}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Dough@{Dough}!IPizza.hpp@{IPizza.hpp}}\index{IPizza.hpp@{IPizza.hpp}!Dough@{Dough}}}\Hypertarget{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0ae2bc49dcba2d6576b9a58ef8249f4534}\label{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0ae2bc49dcba2d6576b9a58ef8249f4534} 
+Dough&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Tomato@{Tomato}!IPizza.hpp@{IPizza.hpp}}\index{IPizza.hpp@{IPizza.hpp}!Tomato@{Tomato}}}\Hypertarget{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0ae2df97ac698e367bd5e3cad607645778}\label{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0ae2df97ac698e367bd5e3cad607645778} 
+Tomato&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Gruyere@{Gruyere}!IPizza.hpp@{IPizza.hpp}}\index{IPizza.hpp@{IPizza.hpp}!Gruyere@{Gruyere}}}\Hypertarget{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0a32155949a447db373c7dafec306ad538}\label{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0a32155949a447db373c7dafec306ad538} 
+Gruyere&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ham@{Ham}!IPizza.hpp@{IPizza.hpp}}\index{IPizza.hpp@{IPizza.hpp}!Ham@{Ham}}}\Hypertarget{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0a9c019fe17d2df841ab84882fd5290b4d}\label{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0a9c019fe17d2df841ab84882fd5290b4d} 
+Ham&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Mushrooms@{Mushrooms}!IPizza.hpp@{IPizza.hpp}}\index{IPizza.hpp@{IPizza.hpp}!Mushrooms@{Mushrooms}}}\Hypertarget{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0aa519e7f4050ec6d486509a07163cec63}\label{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0aa519e7f4050ec6d486509a07163cec63} 
+Mushrooms&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Steak@{Steak}!IPizza.hpp@{IPizza.hpp}}\index{IPizza.hpp@{IPizza.hpp}!Steak@{Steak}}}\Hypertarget{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0aca4357b027d8642b5db6018fd4906130}\label{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0aca4357b027d8642b5db6018fd4906130} 
+Steak&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Eggplant@{Eggplant}!IPizza.hpp@{IPizza.hpp}}\index{IPizza.hpp@{IPizza.hpp}!Eggplant@{Eggplant}}}\Hypertarget{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0a7606d227ad8e65a091fe88d2b2264d5d}\label{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0a7606d227ad8e65a091fe88d2b2264d5d} 
+Eggplant&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GoatCheese@{GoatCheese}!IPizza.hpp@{IPizza.hpp}}\index{IPizza.hpp@{IPizza.hpp}!GoatCheese@{GoatCheese}}}\Hypertarget{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0a50f5546cf36f2fc8fc3de4e8dcef66bf}\label{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0a50f5546cf36f2fc8fc3de4e8dcef66bf} 
+Goat\+Cheese&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ChiefLove@{ChiefLove}!IPizza.hpp@{IPizza.hpp}}\index{IPizza.hpp@{IPizza.hpp}!ChiefLove@{ChiefLove}}}\Hypertarget{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0a3d6dce953272475dea58db87b16eb2e8}\label{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0a3d6dce953272475dea58db87b16eb2e8} 
+Chief\+Love&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6}\label{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6} 
+\index{IPizza.hpp@{IPizza.hpp}!PizzaSize@{PizzaSize}}
+\index{PizzaSize@{PizzaSize}!IPizza.hpp@{IPizza.hpp}}
+\doxysubsubsection{\texorpdfstring{PizzaSize}{PizzaSize}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6}{Pizza\+Size}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S@{S}!IPizza.hpp@{IPizza.hpp}}\index{IPizza.hpp@{IPizza.hpp}!S@{S}}}\Hypertarget{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6af1ce01387d2348f8b858721a7db81670}\label{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6af1ce01387d2348f8b858721a7db81670} 
+S&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M@{M}!IPizza.hpp@{IPizza.hpp}}\index{IPizza.hpp@{IPizza.hpp}!M@{M}}}\Hypertarget{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6a51ca6c63d97347ee58cc7da59ab6994b}\label{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6a51ca6c63d97347ee58cc7da59ab6994b} 
+M&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L@{L}!IPizza.hpp@{IPizza.hpp}}\index{IPizza.hpp@{IPizza.hpp}!L@{L}}}\Hypertarget{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6aef31cc6fe9479955961311ee18ac205f}\label{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6aef31cc6fe9479955961311ee18ac205f} 
+L&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XL@{XL}!IPizza.hpp@{IPizza.hpp}}\index{IPizza.hpp@{IPizza.hpp}!XL@{XL}}}\Hypertarget{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6a54c9e44b3409eb9b91bf89ea1e321a73}\label{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6a54c9e44b3409eb9b91bf89ea1e321a73} 
+XL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XXL@{XXL}!IPizza.hpp@{IPizza.hpp}}\index{IPizza.hpp@{IPizza.hpp}!XXL@{XXL}}}\Hypertarget{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6ab88ec4bc6eb63c7e402209d5b856d461}\label{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6ab88ec4bc6eb63c7e402209d5b856d461} 
+XXL&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{IPizza_8hpp_a5d47f0a0d64879bbfa81d29acccd8f7d}\label{IPizza_8hpp_a5d47f0a0d64879bbfa81d29acccd8f7d} 
+\index{IPizza.hpp@{IPizza.hpp}!PizzaType@{PizzaType}}
+\index{PizzaType@{PizzaType}!IPizza.hpp@{IPizza.hpp}}
+\doxysubsubsection{\texorpdfstring{PizzaType}{PizzaType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{IPizza_8hpp_a5d47f0a0d64879bbfa81d29acccd8f7d}{Pizza\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Regina@{Regina}!IPizza.hpp@{IPizza.hpp}}\index{IPizza.hpp@{IPizza.hpp}!Regina@{Regina}}}\Hypertarget{IPizza_8hpp_a5d47f0a0d64879bbfa81d29acccd8f7da4a339374c459be157b1be6ac7d8e6fca}\label{IPizza_8hpp_a5d47f0a0d64879bbfa81d29acccd8f7da4a339374c459be157b1be6ac7d8e6fca} 
+Regina&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Margarita@{Margarita}!IPizza.hpp@{IPizza.hpp}}\index{IPizza.hpp@{IPizza.hpp}!Margarita@{Margarita}}}\Hypertarget{IPizza_8hpp_a5d47f0a0d64879bbfa81d29acccd8f7da4931b96b11bdae6da3be91d59f819aa9}\label{IPizza_8hpp_a5d47f0a0d64879bbfa81d29acccd8f7da4931b96b11bdae6da3be91d59f819aa9} 
+Margarita&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Americana@{Americana}!IPizza.hpp@{IPizza.hpp}}\index{IPizza.hpp@{IPizza.hpp}!Americana@{Americana}}}\Hypertarget{IPizza_8hpp_a5d47f0a0d64879bbfa81d29acccd8f7da834b9fe6ca5e596ded348e9399913f47}\label{IPizza_8hpp_a5d47f0a0d64879bbfa81d29acccd8f7da834b9fe6ca5e596ded348e9399913f47} 
+Americana&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fantasia@{Fantasia}!IPizza.hpp@{IPizza.hpp}}\index{IPizza.hpp@{IPizza.hpp}!Fantasia@{Fantasia}}}\Hypertarget{IPizza_8hpp_a5d47f0a0d64879bbfa81d29acccd8f7da9c9bb56fe192d0b403451bd1c1f8a346}\label{IPizza_8hpp_a5d47f0a0d64879bbfa81d29acccd8f7da9c9bb56fe192d0b403451bd1c1f8a346} 
+Fantasia&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{IPizza_8hpp_a991e02d6f9f475482ad89504f456730c}\label{IPizza_8hpp_a991e02d6f9f475482ad89504f456730c} 
+\index{IPizza.hpp@{IPizza.hpp}!BasicPizzaNameStr@{BasicPizzaNameStr}}
+\index{BasicPizzaNameStr@{BasicPizzaNameStr}!IPizza.hpp@{IPizza.hpp}}
+\doxysubsubsection{\texorpdfstring{BasicPizzaNameStr}{BasicPizzaNameStr}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} Basic\+Pizza\+Name\+Str\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}regina"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}margarita"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}americana"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}fantasia"{}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{IPizza_8hpp_a771d5cc7af5e9b672cfecfbc894c8cc3}\label{IPizza_8hpp_a771d5cc7af5e9b672cfecfbc894c8cc3} 
+\index{IPizza.hpp@{IPizza.hpp}!PizzaIngredientsStr@{PizzaIngredientsStr}}
+\index{PizzaIngredientsStr@{PizzaIngredientsStr}!IPizza.hpp@{IPizza.hpp}}
+\doxysubsubsection{\texorpdfstring{PizzaIngredientsStr}{PizzaIngredientsStr}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} Pizza\+Ingredients\+Str\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}Dough"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}Tomato"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}Gruyere"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}Ham"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}Mushrooms"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}Steak"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}Eggplant"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}GoatCheese"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}ChiefLove"{}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{IPizza_8hpp_ae904090a6806bf7677850486a99b04f3}\label{IPizza_8hpp_ae904090a6806bf7677850486a99b04f3} 
+\index{IPizza.hpp@{IPizza.hpp}!PizzaSizeStr@{PizzaSizeStr}}
+\index{PizzaSizeStr@{PizzaSizeStr}!IPizza.hpp@{IPizza.hpp}}
+\doxysubsubsection{\texorpdfstring{PizzaSizeStr}{PizzaSizeStr}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} Pizza\+Size\+Str\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}S"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}M"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}L"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}XL"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}XXL"{}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

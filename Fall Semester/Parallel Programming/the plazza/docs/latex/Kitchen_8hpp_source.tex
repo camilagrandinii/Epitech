@@ -1,0 +1,113 @@
+\doxysection{Kitchen.\+hpp}
+\hypertarget{Kitchen_8hpp_source}{}\label{Kitchen_8hpp_source}\index{includes/Kitchen.hpp@{includes/Kitchen.hpp}}
+\mbox{\hyperlink{Kitchen_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ file}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ file}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ KITCHEN\_HPP}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\ \ \ \ \#define\ KITCHEN\_HPP}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\ \ \ \ \#include\ <map>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\ \ \ \ \#include\ <mutex>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\ \ \ \ \#include\ <thread>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\ \ \ \ \#include\ <condition\_variable>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\ \ \ \ \#include\ <ctime>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\ \ \ \ \#include\ <chrono>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\ \ \ \ \#include\ <vector>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\ \ \ \ \#include\ "{}\mbox{\hyperlink{Order_8hpp}{Order.hpp}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\ \ \ \ \#include\ "{}\mbox{\hyperlink{Plazza_8hpp}{Plazza.hpp}}"{}}}
+\DoxyCodeLine{00024\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacePlazza}{Plazza}}\ \{}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPlazza_1_1DeltaTime}{DeltaTime}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Private\ members}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlazza_1_1DeltaTime_a23a26bbaa0199e26c6598da748b46658}{DeltaTime}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlazza_1_1DeltaTime_a32e6301dab077a04e4b0ecd5ffed246f}{\string~DeltaTime}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ std::time\_t\ \mbox{\hyperlink{classPlazza_1_1DeltaTime_af1910a7d7a2f560cf25da8665e54a3af}{afk}};\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ std::time\_t\ \mbox{\hyperlink{classPlazza_1_1DeltaTime_a79547d9047c4f0f1f20fcad36fabfe04}{afk\_c}};\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ std::time\_t\ \mbox{\hyperlink{classPlazza_1_1DeltaTime_a394613726b6829dca0ea411159a2c343}{ingredientsRegen}};\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ std::time\_t\ \mbox{\hyperlink{classPlazza_1_1DeltaTime_a0d98ab5972f4905bb3c5c146647dd9d4}{ingredientsRegen\_c}};\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPlazza_1_1DeltaTime_a82ff9ff12a8738dc16cce6a6378b7b91}{updateAFKTime}}()\ \{\ this-\/>afk\_c\ =\ std::time(0);\ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPlazza_1_1DeltaTime_a7bcdd53b5b1866769d437f35f2005a9f}{resetAFKTime}}()\ \{\ this-\/>afk\ =\ this-\/>\mbox{\hyperlink{classPlazza_1_1DeltaTime_a79547d9047c4f0f1f20fcad36fabfe04}{afk\_c}};\ this-\/>afk\_c\ =\ std::time(0);\ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPlazza_1_1DeltaTime_a2d4f86672ac3558cb22a10072173f8ee}{updateIngredientsRegen}}()\ \{\ this-\/>ingredientsRegen\ =\ this-\/>\mbox{\hyperlink{classPlazza_1_1DeltaTime_a0d98ab5972f4905bb3c5c146647dd9d4}{ingredientsRegen\_c}};\ this-\/>ingredientsRegen\_c\ =\ std::time(0);\ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPlazza_1_1DeltaTime_af8037ae2009032ddc647f8aea2529cb5}{resetIngredientsRegen}}();}
+\DoxyCodeLine{00069\ \ \ \ \ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespacePlazza_a859e89b9d7a032d736c44973e5b2136e}{MessageType}}\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacePlazza_a859e89b9d7a032d736c44973e5b2136ea0356916b239f56c9790aec2156fc51cc}{statusRequest}},\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacePlazza_a859e89b9d7a032d736c44973e5b2136ea43675936d307c6c2a13cfd871be8b219}{statusAnswer}},\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacePlazza_a859e89b9d7a032d736c44973e5b2136ea15d7208bb6dab428890273e27dccfe58}{order}},\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacePlazza_a859e89b9d7a032d736c44973e5b2136ea18f7c70dedcf8ece9cacb9c404bbc1b9}{pizzaDone}},\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacePlazza_a859e89b9d7a032d736c44973e5b2136eae49cf7ac646066dc0e742d9156eaecbf}{kitchenClosing}}\ }
+\DoxyCodeLine{00081\ \ \ \ \ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structPlazza_1_1header__t}{header\_t}}\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structPlazza_1_1header__t_a14bbb88df2e8192a8cac4a4d4aab4fa7}{kitchenId}};\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacePlazza_a859e89b9d7a032d736c44973e5b2136e}{MessageType}}\ \mbox{\hyperlink{structPlazza_1_1header__t_ab1ea18b10740f0be27a1857bee3c7c83}{type}};\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structPlazza_1_1header__t_a588ef86acca69f65e1fdf20c8688da12}{bodySize}};\ }
+\DoxyCodeLine{00091\ \ \ \ \ \};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structPlazza_1_1statusAnswer__t}{statusAnswer\_t}}\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structPlazza_1_1header__t}{header\_t}}\ \mbox{\hyperlink{structPlazza_1_1statusAnswer__t_a0eb9e2a5e68f1037ef97043a7648986d}{header}};\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structPlazza_1_1statusAnswer__t_a7f791de37661dce0b298f97224d69f10}{cookOccupied}};\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structPlazza_1_1statusAnswer__t_a053650de5d6c3b4de59e9b559d5693d0}{ingredients}}[1024];\ }
+\DoxyCodeLine{00101\ \ \ \ \ \};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structPlazza_1_1order__t}{order\_t}}\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structPlazza_1_1header__t}{header\_t}}\ \mbox{\hyperlink{structPlazza_1_1order__t_a4ddc6fff3310501c0e1c3217e5c6ff8a}{header}};\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{Order_8hpp_a5139755bc3942802633abb63aea9faa4}{PIZZAORDER}}\ \mbox{\hyperlink{structPlazza_1_1order__t_a23de12daae842dd8ac010127f0926060}{order}};\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structPlazza_1_1order__t_a451a5b542ebb7ee00821c46bd107b3cd}{orderId}};\ }
+\DoxyCodeLine{00111\ \ \ \ \ \};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structPlazza_1_1pizzaDone__t}{pizzaDone\_t}}\ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structPlazza_1_1header__t}{header\_t}}\ \mbox{\hyperlink{structPlazza_1_1pizzaDone__t_ace46ac6c0940f0a6cd1b240d5570c490}{header}};\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structPlazza_1_1pizzaDone__t_a21018384b81cdfd2bbd912bdc8f33889}{orderId}};\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structPlazza_1_1pizzaDone__t_a6b969a2ceb100fd595328d40a86aaf2e}{pizzaId}};\ }
+\DoxyCodeLine{00121\ \ \ \ \ \};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPlazza_1_1Kitchen}{Kitchen}}\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structOption}{Option}}\ option;\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ pid\_t\ pid;\ }
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlazza_1_1Kitchen_a0df55fd1c14757fd8c5ffba4ff10c28a}{Kitchen}}(\mbox{\hyperlink{structOption}{Option}}\ \&option,\ \textcolor{keywordtype}{int}\ cfd,\ \textcolor{keywordtype}{int}\ pfd,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ std::string\ \mbox{\hyperlink{classPlazza_1_1Kitchen_a728a4341f0088337d74e678aa8b9de55}{pizzaName}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlazza_1_1Kitchen_a88c3b2f9ca3797af9edc4946856656ad}{cookingTime}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlazza_1_1Kitchen_ad4db6763c14be0d5693c3e0b8fa2f37e}{orderId}});}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlazza_1_1Kitchen_aee1b864e26a945c89c72282f0ad64cf9}{\string~Kitchen}}();}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlazza_1_1Kitchen_a3d4716059d15672f0147a12e0341b5db}{Kitchen}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPlazza_1_1Kitchen}{Kitchen}}\&\ other);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlazza_1_1Kitchen}{Kitchen}}\&\ \mbox{\hyperlink{classPlazza_1_1Kitchen_aaeabca682500d2779fcd2fb5c47af0ac}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPlazza_1_1Kitchen}{Kitchen}}\&\ other);}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classPlazza_1_1Kitchen_a728a4341f0088337d74e678aa8b9de55}{pizzaName}};\ }
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlazza_1_1DeltaTime}{DeltaTime}}\ \mbox{\hyperlink{classPlazza_1_1Kitchen_a262a7f53bfac0f54cbf9103192cfc1f9}{time}};\ }
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlazza_1_1Kitchen_a88c3b2f9ca3797af9edc4946856656ad}{cookingTime}};\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlazza_1_1Kitchen_ad4db6763c14be0d5693c3e0b8fa2f37e}{orderId}};\ }
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlazza_1_1Kitchen_a1bb01690c3a965b776716355680756b5}{cookOccupied}}\ =\ 0;\ }
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ std::map<Ingredients,\ int>\ \mbox{\hyperlink{classPlazza_1_1Kitchen_a214957c155275fdbce61d1fce125a503}{ingredients}};\ }
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlazza_1_1Kitchen_af5b8f1015b4d81ee59b8f2da49edfcec}{childFd}};\ }
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlazza_1_1Kitchen_a5e4e9bfa3353035ddb63f39398d1b3d1}{parentFd}};\ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlazza_1_1Kitchen_a06aac8c82b3bfccba3473578483bd813}{kitchenId}};\ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ pthread\_t\ \mbox{\hyperlink{classPlazza_1_1Kitchen_ac9d744b2eeb3c2023324beaac435edb0}{thread}};\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ std::mutex\ \mbox{\hyperlink{classPlazza_1_1Kitchen_ab3661112f48cb8f0d8b097a6041bdf30}{mutex}};\ }
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ std::condition\_variable\ \mbox{\hyperlink{classPlazza_1_1Kitchen_a19a7daa1ad28bc05c1f3df128e65480b}{cond\_vars}};\ }
+\DoxyCodeLine{00176\ \ \ \ \ \};}
+\DoxyCodeLine{00177\ \}}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ KITCHEN\_HPP\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

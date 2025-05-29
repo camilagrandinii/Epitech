@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Backend e Instagram OAuth</title>
+</head>
+<body>
+    <h1>Teste de CORS e Instagram OAuth</h1>
+    
+    <!-- Testar Backend -->
+    <button onclick="testBackend()">Testar Backend</button>
+    <p id="result"></p>
+    
+    <!-- Testar Instagram OAuth -->
+    <button onclick="redirectToInstagram()">Autenticar com Instagram</button>
+
+    <!-- Testar autenticação com código específico -->
+    <button onclick="testSpecificCode()">Testar Código Específico</button>
+
+    <script>
+        async function testBackend() {
+            console.log('Função testBackend chamada'); // Log adicionado
+            try {
+                const response = await fetch('http://localhost:5207/api/Users', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Erro: ${response.status}`);
+                }
+
+                const data = await response.json();
+                console.log('Resposta do backend:', data); // Log da resposta
+                document.getElementById('result').textContent = `Resposta: ${JSON.stringify(data)}`;
+            } catch (error) {
+                console.error('Erro na requisição:', error);
+                document.getElementById('result').textContent = `Erro: ${error.message}`;
+            }
+        }
+
+        function redirectToInstagram() {
+            console.log('Função redirectToInstagram chamada'); // Log adicionado
+            const clientId = '3821586934719684';
+            const redirectUri = 'https://3e9b-46-193-4-204.ngrok-free.app';
+            
+            const scope = 'business_basic,business_manage_messages,business_manage_comments,business_content_publish';
+            const responseType = 'code';
+            
+            const instagramAuthUrl = `https://www.instagram.com/oauth/authorize?enable_fb_login=0&force_authentication=1&client_id=3821586934719684&redirect_uri=https://25a8-2a01-e0a-aab-df30-fb8c-75b2-dd5b-8b4d.ngrok-free.app/&response_type=code&scope=instagram_business_basic%2Cinstagram_business_manage_messages%2Cinstagram_business_manage_comments%2Cinstagram_business_content_publish`;
+            console.log('Redirecionando para o Instagram:', instagramAuthUrl); // Log da URL de redirecionamento
+            window.location.href = instagramAuthUrl;
+        }
+
+        async function sendCodeToBackend(code) {
+            console.log('Função sendCodeToBackend chamada com code:', code); // Log adicionado
+            try {
+                const response = await fetch('http://localhost:5207/api/InstagramAuth/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ code })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Erro ao autenticar: ${response.status}`);
+                }
+
+                const data = await response.json();
+                console.log('Resposta da autenticação:', data); // Log da resposta
+                document.getElementById('result').textContent = `Autenticação bem-sucedida: ${JSON.stringify(data)}`;
+            } catch (error) {
+                console.error('Erro ao autenticar:', error);
+                document.getElementById('result').textContent = `Erro: ${error.message}`;
+            }
+        }
+
+        // Função que extrai o 'code' da URL de redirecionamento
+        function extractCodeFromUrl() {
+            console.log('Função extractCodeFromUrl chamada'); // Log adicionado
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get('code');
+            if (code) {
+                console.log('Code extraído da URL:', code); // Log do código extraído
+                sendCodeToBackend(code);
+            } else {
+                console.log('Nenhum code encontrado na URL'); // Log se nenhum código for encontrado
+            }
+        }
+
+        // Função para testar um código específico
+        function testSpecificCode() {
+            const specificCode = 'AQAmBDgS2KjYGJK0aV1-oNXPqafOXDUD6cI2Ob4Yp9bGEsTUl-DGfmPOj99Ulld59FjCDE_-OgSvvGyUW5pJvVx6hTKGzzDf5kAdSfe8Xlf6CP5aeaH0SCiQaxB9yw3j45kgHreL_hkDlbxOfOLXKTu0uP-eDX1pd31UAuMwrvDNc9Rm3jRvHYaxMAgsXTOdCrmyHsH5QdI-04VAjBYCdzXaTe-YHFCNV-bcLRrgPiC9LQ#_';
+            console.log('Testando código específico:', specificCode); // Log do código específico
+            sendCodeToBackend(specificCode);
+        }
+
+        window.onload = extractCodeFromUrl;
+    </script>
+</body>
+</html>

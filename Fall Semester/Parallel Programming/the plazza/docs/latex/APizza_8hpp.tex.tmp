@@ -1,0 +1,17 @@
+\doxysection{includes/\+APizza.hpp File Reference}
+\hypertarget{APizza_8hpp}{}\label{APizza_8hpp}\index{includes/APizza.hpp@{includes/APizza.hpp}}
+{\ttfamily \#include "{}IPizza.\+hpp"{}}\newline
+Include dependency graph for APizza.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classPlazza_1_1APizza}{Plazza\+::\+APizza}}
+\begin{DoxyCompactList}\small\item\em Abstract base class representing a Pizza. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacePlazza}{Plazza}}
+\end{DoxyCompactItemize}

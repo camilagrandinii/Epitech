@@ -1,0 +1,77 @@
+\doxysection{Plazza Namespace Reference}
+\hypertarget{namespacePlazza}{}\label{namespacePlazza}\index{Plazza@{Plazza}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classPlazza_1_1APizza}{APizza}}
+\begin{DoxyCompactList}\small\item\em Abstract base class representing a Pizza. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classPlazza_1_1Cook}{Cook}}
+\item 
+class \mbox{\hyperlink{classPlazza_1_1DeltaTime}{Delta\+Time}}
+\begin{DoxyCompactList}\small\item\em Manages time tracking for various events. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structPlazza_1_1header__t}{header\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure representing the header of a message. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classPlazza_1_1IPizza}{IPizza}}
+\item 
+class \mbox{\hyperlink{classPlazza_1_1Kitchen}{Kitchen}}
+\begin{DoxyCompactList}\small\item\em Manages the operations of a kitchen. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classPlazza_1_1Order}{Order}}
+\begin{DoxyCompactList}\small\item\em Represents a pizza order. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structPlazza_1_1order__t}{order\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure representing an order message. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structPlazza_1_1pizzaDone__t}{pizza\+Done\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure representing a pizza done message. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classPlazza_1_1Reception}{Reception}}
+\begin{DoxyCompactList}\small\item\em Manages the reception and distribution of pizza orders to various kitchens. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structPlazza_1_1statusAnswer__t}{status\+Answer\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure representing the status answer message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacePlazza_a859e89b9d7a032d736c44973e5b2136e}{Message\+Type}} \{ \newline
+\mbox{\hyperlink{namespacePlazza_a859e89b9d7a032d736c44973e5b2136ea0356916b239f56c9790aec2156fc51cc}{status\+Request}}
+, \mbox{\hyperlink{namespacePlazza_a859e89b9d7a032d736c44973e5b2136ea43675936d307c6c2a13cfd871be8b219}{status\+Answer}}
+, \mbox{\hyperlink{namespacePlazza_a859e89b9d7a032d736c44973e5b2136ea15d7208bb6dab428890273e27dccfe58}{order}}
+, \mbox{\hyperlink{namespacePlazza_a859e89b9d7a032d736c44973e5b2136ea18f7c70dedcf8ece9cacb9c404bbc1b9}{pizza\+Done}}
+, \newline
+\mbox{\hyperlink{namespacePlazza_a859e89b9d7a032d736c44973e5b2136eae49cf7ac646066dc0e742d9156eaecbf}{kitchen\+Closing}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumerates the types of messages that can be exchanged. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{namespacePlazza}{Plazza} namespace contains all classes, structures, and enumerations used in the \doxylink{namespacePlazza}{Plazza} project. 
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespacePlazza_a859e89b9d7a032d736c44973e5b2136e}\label{namespacePlazza_a859e89b9d7a032d736c44973e5b2136e} 
+\index{Plazza@{Plazza}!MessageType@{MessageType}}
+\index{MessageType@{MessageType}!Plazza@{Plazza}}
+\doxysubsubsection{\texorpdfstring{MessageType}{MessageType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacePlazza_a859e89b9d7a032d736c44973e5b2136e}{Plazza\+::\+Message\+Type}}}
+
+
+
+Enumerates the types of messages that can be exchanged. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{statusRequest@{statusRequest}!Plazza@{Plazza}}\index{Plazza@{Plazza}!statusRequest@{statusRequest}}}\Hypertarget{namespacePlazza_a859e89b9d7a032d736c44973e5b2136ea0356916b239f56c9790aec2156fc51cc}\label{namespacePlazza_a859e89b9d7a032d736c44973e5b2136ea0356916b239f56c9790aec2156fc51cc} 
+status\+Request&Request for status. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{statusAnswer@{statusAnswer}!Plazza@{Plazza}}\index{Plazza@{Plazza}!statusAnswer@{statusAnswer}}}\Hypertarget{namespacePlazza_a859e89b9d7a032d736c44973e5b2136ea43675936d307c6c2a13cfd871be8b219}\label{namespacePlazza_a859e89b9d7a032d736c44973e5b2136ea43675936d307c6c2a13cfd871be8b219} 
+status\+Answer&Answer to status request. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{order@{order}!Plazza@{Plazza}}\index{Plazza@{Plazza}!order@{order}}}\Hypertarget{namespacePlazza_a859e89b9d7a032d736c44973e5b2136ea15d7208bb6dab428890273e27dccfe58}\label{namespacePlazza_a859e89b9d7a032d736c44973e5b2136ea15d7208bb6dab428890273e27dccfe58} 
+order&\doxylink{classPlazza_1_1Order}{Order} message. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pizzaDone@{pizzaDone}!Plazza@{Plazza}}\index{Plazza@{Plazza}!pizzaDone@{pizzaDone}}}\Hypertarget{namespacePlazza_a859e89b9d7a032d736c44973e5b2136ea18f7c70dedcf8ece9cacb9c404bbc1b9}\label{namespacePlazza_a859e89b9d7a032d736c44973e5b2136ea18f7c70dedcf8ece9cacb9c404bbc1b9} 
+pizza\+Done&Notification that pizza is done. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kitchenClosing@{kitchenClosing}!Plazza@{Plazza}}\index{Plazza@{Plazza}!kitchenClosing@{kitchenClosing}}}\Hypertarget{namespacePlazza_a859e89b9d7a032d736c44973e5b2136eae49cf7ac646066dc0e742d9156eaecbf}\label{namespacePlazza_a859e89b9d7a032d736c44973e5b2136eae49cf7ac646066dc0e742d9156eaecbf} 
+kitchen\+Closing&Notification that kitchen is closing. \\
+\hline
+
+\end{DoxyEnumFields}

@@ -1,0 +1,48 @@
+---
+- name: Unarchive result.zip
+  become: true
+  unarchive:
+    src: ../files/result.zip
+    dest: /opt/
+
+- name: Install Node and Npm
+  become: true
+  apt:
+    name: 
+      - nodejs
+      - npm
+    state: present
+    
+- name: Install dependencies
+  npm:
+    path: /opt/result/
+
+- name: Install AngularJS
+  npm:
+    name: angular
+    path: /opt/result/
+
+- name: Run JavaScript code
+  command: node /opt/result/server.js
+  environment:
+    NODE_ENV: "{{ lookup('env', 'NODE_ENV') }}"
+    PORT: "{{ result_port }}"
+    POSTGRES_USER: "{{ postgresql_user }}"
+    POSTGRES_PASSWORD: "{{ postgresql_pass }}"
+    POSTGRES_HOST: "{{ postgresql_host }}"
+    POSTGRES_PORT: "{{ postgresql_port }}" 
+    POSTGRES_DB: "{{ postgresql_db }}"
+  become: true
+  become_user: root
+  register: app_output
+  async: 1800
+  poll: 0
+
+- name: ufw rules
+  become: true
+  community.general.ufw:
+    rule: "allow"
+    port: "{{ item }}"
+    proto: "tcp"
+  loop:
+    - "80"

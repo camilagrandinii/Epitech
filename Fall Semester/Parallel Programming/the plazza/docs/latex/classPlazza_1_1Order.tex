@@ -1,0 +1,97 @@
+\doxysection{Plazza\+::Order Class Reference}
+\hypertarget{classPlazza_1_1Order}{}\label{classPlazza_1_1Order}\index{Plazza::Order@{Plazza::Order}}
+
+
+Represents a pizza order.  
+
+
+
+
+{\ttfamily \#include $<$Order.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlazza_1_1Order_ac7bd3d92cc3d3032c03e789c43e9fc52}{Order}} (std\+::vector$<$ \mbox{\hyperlink{Order_8hpp_a5139755bc3942802633abb63aea9faa4}{PIZZAORDER}} $>$ \&order, int id)
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{classPlazza_1_1Order}{Order} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlazza_1_1Order_aa6ef073ff72c916339e572ba6b52e9b6}{\texorpdfstring{$\sim$}{\string~}\+Order}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor for the \doxylink{classPlazza_1_1Order}{Order} class. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPlazza_1_1Order_a1fff83750157c9be88a331444ba88fd1}{get\+Id}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the ID of the order. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPlazza_1_1Order_afa6fcdf71bae607708b1a8876c65939b}{get\+Is\+Order\+Ready}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Checks if the order is ready. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{Order_8hpp_a5139755bc3942802633abb63aea9faa4}{PIZZAORDER}} $>$ \& \mbox{\hyperlink{classPlazza_1_1Order_a1add83be82914e3d7642c8ba71934171}{get\+Order}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Gets the list of pizzas in the order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a pizza order. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPlazza_1_1Order_ac7bd3d92cc3d3032c03e789c43e9fc52}\label{classPlazza_1_1Order_ac7bd3d92cc3d3032c03e789c43e9fc52} 
+\index{Plazza::Order@{Plazza::Order}!Order@{Order}}
+\index{Order@{Order}!Plazza::Order@{Plazza::Order}}
+\doxysubsubsection{\texorpdfstring{Order()}{Order()}}
+{\footnotesize\ttfamily Plazza\+::\+Order\+::\+Order (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{Order_8hpp_a5139755bc3942802633abb63aea9faa4}{PIZZAORDER}} $>$ \&}]{order,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \doxylink{classPlazza_1_1Order}{Order} class. 
+
+\Hypertarget{classPlazza_1_1Order_aa6ef073ff72c916339e572ba6b52e9b6}\label{classPlazza_1_1Order_aa6ef073ff72c916339e572ba6b52e9b6} 
+\index{Plazza::Order@{Plazza::Order}!````~Order@{\texorpdfstring{$\sim$}{\string~}Order}}
+\index{````~Order@{\texorpdfstring{$\sim$}{\string~}Order}!Plazza::Order@{Plazza::Order}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Order()}{\string~Order()}}
+{\footnotesize\ttfamily Plazza\+::\+Order\+::\texorpdfstring{$\sim$}{\string~}\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default destructor for the \doxylink{classPlazza_1_1Order}{Order} class. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPlazza_1_1Order_a1fff83750157c9be88a331444ba88fd1}\label{classPlazza_1_1Order_a1fff83750157c9be88a331444ba88fd1} 
+\index{Plazza::Order@{Plazza::Order}!getId@{getId}}
+\index{getId@{getId}!Plazza::Order@{Plazza::Order}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Plazza\+::\+Order\+::get\+Id (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the ID of the order. 
+
+\begin{DoxyReturn}{Returns}
+The ID of the order. 
+\end{DoxyReturn}
+\Hypertarget{classPlazza_1_1Order_afa6fcdf71bae607708b1a8876c65939b}\label{classPlazza_1_1Order_afa6fcdf71bae607708b1a8876c65939b} 
+\index{Plazza::Order@{Plazza::Order}!getIsOrderReady@{getIsOrderReady}}
+\index{getIsOrderReady@{getIsOrderReady}!Plazza::Order@{Plazza::Order}}
+\doxysubsubsection{\texorpdfstring{getIsOrderReady()}{getIsOrderReady()}}
+{\footnotesize\ttfamily bool Plazza\+::\+Order\+::get\+Is\+Order\+Ready (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Checks if the order is ready. 
+
+\begin{DoxyReturn}{Returns}
+True if the order is ready, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classPlazza_1_1Order_a1add83be82914e3d7642c8ba71934171}\label{classPlazza_1_1Order_a1add83be82914e3d7642c8ba71934171} 
+\index{Plazza::Order@{Plazza::Order}!getOrder@{getOrder}}
+\index{getOrder@{getOrder}!Plazza::Order@{Plazza::Order}}
+\doxysubsubsection{\texorpdfstring{getOrder()}{getOrder()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{Order_8hpp_a5139755bc3942802633abb63aea9faa4}{PIZZAORDER}} $>$ \& Plazza\+::\+Order\+::get\+Order (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the list of pizzas in the order. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the vector of pizzas in the order. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+includes/\mbox{\hyperlink{Order_8hpp}{Order.\+hpp}}\end{DoxyCompactItemize}

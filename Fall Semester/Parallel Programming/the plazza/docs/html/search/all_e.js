@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['parentfd_0',['parentfd',['../classPlazza_1_1Kitchen.html#a5e4e9bfa3353035ddb63f39398d1b3d1',1,'Plazza::Kitchen::parentFd'],['../classPlazza_1_1Reception.html#aa14ba56de701b1cdbb3ef4701713face',1,'Plazza::Reception::parentFd']]],
+  ['parseconfigurationfile_1',['parseConfigurationFile',['../Reception_8hpp.html#aa5dfedb7fbe906b74189c8dc83e006ad',1,'Reception.hpp']]],
+  ['parseinput_2',['parseInput',['../classPlazza_1_1Reception.html#aa1bb20a20ff733464086e2d55948571f',1,'Plazza::Reception']]],
+  ['pathtoconffile_3',['pathToConfFile',['../structConfiguration.html#a4ba46f8ac9d66f411e1fb184467a6372',1,'Configuration']]],
+  ['pizzadone_4',['pizzaDone',['../namespacePlazza.html#a859e89b9d7a032d736c44973e5b2136ea18f7c70dedcf8ece9cacb9c404bbc1b9',1,'Plazza']]],
+  ['pizzadone_5ft_5',['pizzaDone_t',['../structPlazza_1_1pizzaDone__t.html',1,'Plazza']]],
+  ['pizzaid_6',['pizzaId',['../structPlazza_1_1pizzaDone__t.html#a6b969a2ceb100fd595328d40a86aaf2e',1,'Plazza::pizzaDone_t']]],
+  ['pizzaingredientsstr_7',['PizzaIngredientsStr',['../IPizza_8hpp.html#a771d5cc7af5e9b672cfecfbc894c8cc3',1,'IPizza.hpp']]],
+  ['pizzalist_8',['PIZZALIST',['../Reception_8hpp.html#a5ceb89da3bfcf681c69977b5e7cbae4a',1,'Reception.hpp']]],
+  ['pizzaname_9',['pizzaName',['../classPlazza_1_1Kitchen.html#a728a4341f0088337d74e678aa8b9de55',1,'Plazza::Kitchen']]],
+  ['pizzaorder_10',['PIZZAORDER',['../Order_8hpp.html#a5139755bc3942802633abb63aea9faa4',1,'Order.hpp']]],
+  ['pizzasize_11',['PizzaSize',['../IPizza_8hpp.html#a4874239e3ed6625fe4c6678ce4b997a6',1,'IPizza.hpp']]],
+  ['pizzasizestr_12',['PizzaSizeStr',['../IPizza_8hpp.html#ae904090a6806bf7677850486a99b04f3',1,'IPizza.hpp']]],
+  ['pizzatype_13',['PizzaType',['../IPizza_8hpp.html#a5d47f0a0d64879bbfa81d29acccd8f7d',1,'IPizza.hpp']]],
+  ['plazza_14',['Plazza',['../namespacePlazza.html',1,'']]],
+  ['plazza_2ehpp_15',['Plazza.hpp',['../Plazza_8hpp.html',1,'']]]
+];

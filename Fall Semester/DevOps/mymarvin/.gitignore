@@ -1,0 +1,4 @@
+configuration-as-code.hpi
+docker-compose.yml
+Dockerfile
+.env

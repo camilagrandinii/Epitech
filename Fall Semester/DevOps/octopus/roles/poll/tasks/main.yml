@@ -1,0 +1,42 @@
+---
+- name: unzip poll.zip
+  become: true
+  unarchive:
+    src: ../files/poll.zip
+    dest: /opt/
+
+- name: Create virtual environment
+  become: true
+  command:
+    cmd: python3 -m venv /venv/
+    creates: /venv/bin/python
+
+- name: Install Flask and Redis Python libraries in virtual environment
+  become: true
+  pip:
+    name: "{{ item }}"
+    virtualenv: /venv/
+    state: present
+  with_items:
+    - flask
+    - redis
+
+- name: Start Flask application with Redis integration in the background
+  become: true
+  command: "nohup /venv/bin/python3 /opt/poll/app.py > /dev/null 2>&1 &"
+  environment:
+    REDIS_HOST: "{{ redis_host }}"
+    REDIS_PORT: "{{ redis_port }}"
+  async: 1800
+  poll: 0
+
+
+
+- name: ufw rules
+  become: true
+  community.general.ufw:
+    rule: "allow"
+    port: "{{ item }}"
+    proto: "tcp"
+  with_items:
+    - "80"

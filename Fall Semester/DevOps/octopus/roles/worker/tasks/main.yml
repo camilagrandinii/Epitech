@@ -1,0 +1,84 @@
+- name: Unzip worker
+  become: true
+  register: worker
+  unarchive:
+    src: ../files/worker.zip
+    dest: /home/
+
+- name: Copy Home to opt
+  when: worker.changed
+  copy: 
+    remote_src: True 
+    src: /home/worker
+    dest: /opt
+
+- name: Create directory for Java installation
+  file:
+    path: /opt/java
+    state: directory
+
+- name: Download Java 21
+  get_url:
+    url: "https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb"
+    dest: "/opt/java/{{ jdk_package }}"
+    mode: '0644'
+  vars:
+    jdk_package: "jdk-21_linux-x64_bin.deb"
+
+- name: Install Java 21 from Debian package
+  become: true
+  apt:
+    deb: "/opt/java/{{ jdk_package }}"
+    state: present
+  vars:
+    jdk_package: "jdk-21_linux-x64_bin.deb"
+
+
+- name: Install Java
+  become: true
+  apt:
+    state: present
+    update_cache: yes
+    name: 
+      - maven
+
+- name: Build project with Maven
+  command: mvn clean package -f /opt/worker/pom.xml
+  register: maven
+  args:
+    chdir: /opt/worker
+
+- name: Copy good path .jar
+  when: maven.changed
+  register: copy
+  copy: 
+    remote_src: True 
+    src: "{{ item }}"
+    dest: /opt
+  loop:
+    - /opt/worker/target/worker.jar
+    - /opt/worker/target/worker-jar-with-dependencies.jar
+
+- name: Run java code
+  command: /usr/bin/java -jar /opt/worker-jar-with-dependencies.jar
+  args:
+    chdir: /opt
+  environment:
+    REDIS_HOST: "{{ redis_host }}"
+    NODE_ENV: "{{ lookup('env', 'NODE_ENV') }}"
+    PORT: "{{ result_port }}"
+    POSTGRES_USER: "{{ postgresql_user }}"
+    POSTGRES_PASSWORD: "{{ postgresql_pass }}"
+    POSTGRES_HOST: "{{ postgresql_host }}"
+    POSTGRES_PORT: "{{ postgresql_port }}" 
+    POSTGRES_DB: "{{ postgresql_db }}"
+  async: 1800
+  poll: 0
+- name: ufw rules
+  become: true
+  community.general.ufw:
+    rule: "allow"
+    port: "{{ item }}"
+    proto: "tcp"
+  with_items:
+    - "80"

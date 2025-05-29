@@ -1,0 +1,156 @@
+\doxysection{Plazza\+::APizza Class Reference}
+\hypertarget{classPlazza_1_1APizza}{}\label{classPlazza_1_1APizza}\index{Plazza::APizza@{Plazza::APizza}}
+
+
+Abstract base class representing a Pizza.  
+
+
+
+
+{\ttfamily \#include $<$APizza.\+hpp$>$}
+
+
+
+Inheritance diagram for Plazza\+::APizza\+:
+% FIG 0
+
+
+Collaboration diagram for Plazza\+::APizza\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlazza_1_1APizza_a00eb36e23c521ce37322d7f039c21840}{APizza}} (std\+::string name, std\+::vector$<$ \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0}{Ingredients}} $>$ ingredients, int cooking\+Time)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classPlazza_1_1APizza}{APizza} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlazza_1_1APizza_afa7b9c5a4e01e353f854fa9b37502e1a}{APizza}} (const \mbox{\hyperlink{classPlazza_1_1APizza}{APizza}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor for \doxylink{classPlazza_1_1APizza}{APizza}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlazza_1_1APizza_a004ca075b6925cf77906dc68c85da2c6}{\texorpdfstring{$\sim$}{\string~}\+APizza}} ()=default
+\begin{DoxyCompactList}\small\item\em Destruct an \doxylink{classPlazza_1_1APizza}{APizza} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPlazza_1_1APizza_a49bd9f6fc264b13a05d0e37349bd83f2}{get\+Cooking\+Time}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the cooking time of the pizza. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classPlazza_1_1APizza_a565cffd38f0ac5a4051c57680a930dd2}{get\+Name}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the name of the pizza. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0}{Ingredients}} $>$ \mbox{\hyperlink{classPlazza_1_1APizza_a95706d6fdee4d00b14161d6d732055b0}{get\+Ingredients}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the ingredients of the pizza. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlazza_1_1APizza}{APizza}} \& \mbox{\hyperlink{classPlazza_1_1APizza_a8f8b3e65f9e95cad7589d68ca1bfabce}{operator=}} (const \mbox{\hyperlink{classPlazza_1_1APizza}{APizza}} \&other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classPlazza_1_1IPizza}{Plazza\+::\+IPizza}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classPlazza_1_1IPizza_ac650f1da9d7be2a3494027775d148cd1}{\texorpdfstring{$\sim$}{\string~}\+IPizza}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class representing a Pizza. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPlazza_1_1APizza_a00eb36e23c521ce37322d7f039c21840}\label{classPlazza_1_1APizza_a00eb36e23c521ce37322d7f039c21840} 
+\index{Plazza::APizza@{Plazza::APizza}!APizza@{APizza}}
+\index{APizza@{APizza}!Plazza::APizza@{Plazza::APizza}}
+\doxysubsubsection{\texorpdfstring{APizza()}{APizza()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Plazza\+::\+APizza\+::\+APizza (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::vector$<$ \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0}{Ingredients}} $>$}]{ingredients,  }\item[{int}]{cooking\+Time }\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{classPlazza_1_1APizza}{APizza} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the pizza. \\
+\hline
+{\em ingredients} & The ingredients used in the pizza. \\
+\hline
+{\em cooking\+Time} & The cooking time for the pizza. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classPlazza_1_1APizza_afa7b9c5a4e01e353f854fa9b37502e1a}\label{classPlazza_1_1APizza_afa7b9c5a4e01e353f854fa9b37502e1a} 
+\index{Plazza::APizza@{Plazza::APizza}!APizza@{APizza}}
+\index{APizza@{APizza}!Plazza::APizza@{Plazza::APizza}}
+\doxysubsubsection{\texorpdfstring{APizza()}{APizza()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Plazza\+::\+APizza\+::\+APizza (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPlazza_1_1APizza}{APizza}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor for \doxylink{classPlazza_1_1APizza}{APizza}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \doxylink{classPlazza_1_1APizza}{APizza} object to copy from. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classPlazza_1_1APizza_a004ca075b6925cf77906dc68c85da2c6}\label{classPlazza_1_1APizza_a004ca075b6925cf77906dc68c85da2c6} 
+\index{Plazza::APizza@{Plazza::APizza}!````~APizza@{\texorpdfstring{$\sim$}{\string~}APizza}}
+\index{````~APizza@{\texorpdfstring{$\sim$}{\string~}APizza}!Plazza::APizza@{Plazza::APizza}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}APizza()}{\string~APizza()}}
+{\footnotesize\ttfamily Plazza\+::\+APizza\+::\texorpdfstring{$\sim$}{\string~}\+APizza (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destruct an \doxylink{classPlazza_1_1APizza}{APizza} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPlazza_1_1APizza_a49bd9f6fc264b13a05d0e37349bd83f2}\label{classPlazza_1_1APizza_a49bd9f6fc264b13a05d0e37349bd83f2} 
+\index{Plazza::APizza@{Plazza::APizza}!getCookingTime@{getCookingTime}}
+\index{getCookingTime@{getCookingTime}!Plazza::APizza@{Plazza::APizza}}
+\doxysubsubsection{\texorpdfstring{getCookingTime()}{getCookingTime()}}
+{\footnotesize\ttfamily int Plazza\+::\+APizza\+::get\+Cooking\+Time (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Gets the cooking time of the pizza. 
+
+\begin{DoxyReturn}{Returns}
+The cooking time of the pizza. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classPlazza_1_1IPizza_a4418ccd5fa359e58b29de8a6858d5ae9}{Plazza\+::\+IPizza}}.
+
+\Hypertarget{classPlazza_1_1APizza_a95706d6fdee4d00b14161d6d732055b0}\label{classPlazza_1_1APizza_a95706d6fdee4d00b14161d6d732055b0} 
+\index{Plazza::APizza@{Plazza::APizza}!getIngredients@{getIngredients}}
+\index{getIngredients@{getIngredients}!Plazza::APizza@{Plazza::APizza}}
+\doxysubsubsection{\texorpdfstring{getIngredients()}{getIngredients()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0}{Ingredients}} $>$ Plazza\+::\+APizza\+::get\+Ingredients (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Gets the ingredients of the pizza. 
+
+\begin{DoxyReturn}{Returns}
+A vector of ingredients used in the pizza. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classPlazza_1_1IPizza_a0715857b81fe3b12dc6a93d6952cc61b}{Plazza\+::\+IPizza}}.
+
+\Hypertarget{classPlazza_1_1APizza_a565cffd38f0ac5a4051c57680a930dd2}\label{classPlazza_1_1APizza_a565cffd38f0ac5a4051c57680a930dd2} 
+\index{Plazza::APizza@{Plazza::APizza}!getName@{getName}}
+\index{getName@{getName}!Plazza::APizza@{Plazza::APizza}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Plazza\+::\+APizza\+::get\+Name (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Gets the name of the pizza. 
+
+\begin{DoxyReturn}{Returns}
+The name of the pizza. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classPlazza_1_1IPizza_adc402f19f16b5f8af1167be13e8d14b3}{Plazza\+::\+IPizza}}.
+
+\Hypertarget{classPlazza_1_1APizza_a8f8b3e65f9e95cad7589d68ca1bfabce}\label{classPlazza_1_1APizza_a8f8b3e65f9e95cad7589d68ca1bfabce} 
+\index{Plazza::APizza@{Plazza::APizza}!operator=@{operator=}}
+\index{operator=@{operator=}!Plazza::APizza@{Plazza::APizza}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlazza_1_1APizza}{APizza}} \& Plazza\+::\+APizza\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPlazza_1_1APizza}{APizza}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+includes/\mbox{\hyperlink{APizza_8hpp}{APizza.\+hpp}}\end{DoxyCompactItemize}

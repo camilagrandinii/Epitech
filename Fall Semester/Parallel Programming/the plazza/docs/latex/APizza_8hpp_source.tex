@@ -1,0 +1,44 @@
+\doxysection{APizza.\+hpp}
+\hypertarget{APizza_8hpp_source}{}\label{APizza_8hpp_source}\index{includes/APizza.hpp@{includes/APizza.hpp}}
+\mbox{\hyperlink{APizza_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ file}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ file}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ APIZZA\_HPP}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\ \ \ \ \#define\ APIZZA\_HPP}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\ \ \ \ \#include\ "{}\mbox{\hyperlink{IPizza_8hpp}{IPizza.hpp}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacePlazza}{Plazza}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPlazza_1_1APizza}{APizza}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classPlazza_1_1IPizza}{IPizza}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ name;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Ingredients>\ ingredients;\ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cookingTime;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlazza_1_1APizza_a00eb36e23c521ce37322d7f039c21840}{APizza}}(std::string\ name,\ std::vector<Ingredients>\ ingredients,\ \textcolor{keywordtype}{int}\ cookingTime);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlazza_1_1APizza_afa7b9c5a4e01e353f854fa9b37502e1a}{APizza}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPlazza_1_1APizza}{APizza}}\ \&other);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlazza_1_1APizza_a004ca075b6925cf77906dc68c85da2c6}{\string~APizza}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlazza_1_1APizza_a49bd9f6fc264b13a05d0e37349bd83f2}{getCookingTime}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::string\ \mbox{\hyperlink{classPlazza_1_1APizza_a565cffd38f0ac5a4051c57680a930dd2}{getName}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::vector<Ingredients>\ \mbox{\hyperlink{classPlazza_1_1APizza_a95706d6fdee4d00b14161d6d732055b0}{getIngredients}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlazza_1_1APizza}{APizza}}\ \&\mbox{\hyperlink{classPlazza_1_1APizza_a8f8b3e65f9e95cad7589d68ca1bfabce}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPlazza_1_1APizza}{APizza}}\ \&other);}
+\DoxyCodeLine{00065\ \ \ \ \ \};}
+\DoxyCodeLine{00066\ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ APIZZA\_HPP\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,255 @@
+\doxysection{Plazza\+::Reception Class Reference}
+\hypertarget{classPlazza_1_1Reception}{}\label{classPlazza_1_1Reception}\index{Plazza::Reception@{Plazza::Reception}}
+
+
+Manages the reception and distribution of pizza orders to various kitchens.  
+
+
+
+
+{\ttfamily \#include $<$Reception.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlazza_1_1Reception_acf47711779928e9aeb6a5167a5d87e28}{Reception}} (\mbox{\hyperlink{structOption}{Option}} \&option, \mbox{\hyperlink{Reception_8hpp_a5ceb89da3bfcf681c69977b5e7cbae4a}{PIZZALIST}} \&pizza\+List)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{classPlazza_1_1Reception}{Reception} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlazza_1_1Reception_a44163f32bbcc8404691c7216e70a56b1}{\texorpdfstring{$\sim$}{\string~}\+Reception}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classPlazza_1_1Reception}{Reception} class. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPlazza_1_1Reception_aa61c390bac4350b19b1747231731e251}{find\+AKitchen}} (void)
+\begin{DoxyCompactList}\small\item\em Finds an available kitchen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlazza_1_1Reception_ad5327d8645db2e67dbe7cb95fd1b371d}{Run}} (void)
+\begin{DoxyCompactList}\small\item\em Runs the reception operations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlazza_1_1Reception_a53edb7a66960be695c7f51eb1b305e78}{assign\+Order\+To\+Kitchen}} (\mbox{\hyperlink{Order_8hpp_a5139755bc3942802633abb63aea9faa4}{PIZZAORDER}} \&\mbox{\hyperlink{namespacePlazza_a859e89b9d7a032d736c44973e5b2136ea15d7208bb6dab428890273e27dccfe58}{order}})
+\begin{DoxyCompactList}\small\item\em Assigns an order to a kitchen. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Reception_8hpp_a6377235adf663ac495058e8aeaefe684}{ORDERS}} \& \mbox{\hyperlink{classPlazza_1_1Reception_aef3497da719a785acefcf6edad59b1a4}{get\+Orders}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Gets the list of orders. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{Reception_8hpp_a1dd8eb0a812ae3f8b4f3240a26408962}{KITCHEN}} \& \mbox{\hyperlink{classPlazza_1_1Reception_a45a36fb5bb165d04a962c6bd179ff12b}{get\+Kitchen}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the list of kitchens. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPlazza_1_1Reception_aa1bb20a20ff733464086e2d55948571f}{parse\+Input}} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Parses the input string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ pthread\+\_\+t $>$ \mbox{\hyperlink{classPlazza_1_1Reception_a5f9ad7724c911eede47a9eef0023e9ad}{kitchen\+Thread}}
+\begin{DoxyCompactList}\small\item\em Vector of kitchen threads. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Reception_8hpp_a1dd8eb0a812ae3f8b4f3240a26408962}{KITCHEN}} \mbox{\hyperlink{classPlazza_1_1Reception_a2355a4e15fe5cea50af4b488b3ddb37b}{kitchens}}
+\begin{DoxyCompactList}\small\item\em List of kitchens. \end{DoxyCompactList}\item 
+std\+::mutex \mbox{\hyperlink{classPlazza_1_1Reception_a2bafce5ca6c826ddc785d8f17738205c}{mutex}}
+\begin{DoxyCompactList}\small\item\em Mutex for thread synchronization. \end{DoxyCompactList}\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{classPlazza_1_1Reception_aa35a3f48fe6b36917b8b2183bc1e81b9}{cond\+\_\+vars}}
+\begin{DoxyCompactList}\small\item\em Condition variable for thread synchronization. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPlazza_1_1Reception_aa14ba56de701b1cdbb3ef4701713face}{parent\+Fd}}
+\begin{DoxyCompactList}\small\item\em Parent file descriptor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPlazza_1_1Reception_adb8722da8936b80e9e3c53e42ddab859}{child\+Fd}}
+\begin{DoxyCompactList}\small\item\em Child file descriptor. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classPlazza_1_1Reception_a11f9667dd74d0c2ba3b350c38658a61e}{active\+Kitchen\+Id}}
+\begin{DoxyCompactList}\small\item\em Vector of active kitchen IDs. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPlazza_1_1Reception_a1ce8190ae8583a2cbf6d5371485e1eda}{stop}} = false
+\begin{DoxyCompactList}\small\item\em Flag to stop the reception operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the reception and distribution of pizza orders to various kitchens. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPlazza_1_1Reception_acf47711779928e9aeb6a5167a5d87e28}\label{classPlazza_1_1Reception_acf47711779928e9aeb6a5167a5d87e28} 
+\index{Plazza::Reception@{Plazza::Reception}!Reception@{Reception}}
+\index{Reception@{Reception}!Plazza::Reception@{Plazza::Reception}}
+\doxysubsubsection{\texorpdfstring{Reception()}{Reception()}}
+{\footnotesize\ttfamily Plazza\+::\+Reception\+::\+Reception (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structOption}{Option}} \&}]{option,  }\item[{\mbox{\hyperlink{Reception_8hpp_a5ceb89da3bfcf681c69977b5e7cbae4a}{PIZZALIST}} \&}]{pizza\+List }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{classPlazza_1_1Reception}{Reception} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & Reference to the \doxylink{structOption}{Option} object. \\
+\hline
+{\em pizza\+List} & Reference to the list of available pizzas. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classPlazza_1_1Reception_a44163f32bbcc8404691c7216e70a56b1}\label{classPlazza_1_1Reception_a44163f32bbcc8404691c7216e70a56b1} 
+\index{Plazza::Reception@{Plazza::Reception}!````~Reception@{\texorpdfstring{$\sim$}{\string~}Reception}}
+\index{````~Reception@{\texorpdfstring{$\sim$}{\string~}Reception}!Plazza::Reception@{Plazza::Reception}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Reception()}{\string~Reception()}}
+{\footnotesize\ttfamily Plazza\+::\+Reception\+::\texorpdfstring{$\sim$}{\string~}\+Reception (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for the \doxylink{classPlazza_1_1Reception}{Reception} class. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPlazza_1_1Reception_a53edb7a66960be695c7f51eb1b305e78}\label{classPlazza_1_1Reception_a53edb7a66960be695c7f51eb1b305e78} 
+\index{Plazza::Reception@{Plazza::Reception}!assignOrderToKitchen@{assignOrderToKitchen}}
+\index{assignOrderToKitchen@{assignOrderToKitchen}!Plazza::Reception@{Plazza::Reception}}
+\doxysubsubsection{\texorpdfstring{assignOrderToKitchen()}{assignOrderToKitchen()}}
+{\footnotesize\ttfamily void Plazza\+::\+Reception\+::assign\+Order\+To\+Kitchen (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Order_8hpp_a5139755bc3942802633abb63aea9faa4}{PIZZAORDER}} \&}]{order }\end{DoxyParamCaption})}
+
+
+
+Assigns an order to a kitchen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & Reference to the pizza order. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classPlazza_1_1Reception_aa61c390bac4350b19b1747231731e251}\label{classPlazza_1_1Reception_aa61c390bac4350b19b1747231731e251} 
+\index{Plazza::Reception@{Plazza::Reception}!findAKitchen@{findAKitchen}}
+\index{findAKitchen@{findAKitchen}!Plazza::Reception@{Plazza::Reception}}
+\doxysubsubsection{\texorpdfstring{findAKitchen()}{findAKitchen()}}
+{\footnotesize\ttfamily int Plazza\+::\+Reception\+::find\+AKitchen (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Finds an available kitchen. 
+
+\begin{DoxyReturn}{Returns}
+The ID of an available kitchen. 
+\end{DoxyReturn}
+\Hypertarget{classPlazza_1_1Reception_a45a36fb5bb165d04a962c6bd179ff12b}\label{classPlazza_1_1Reception_a45a36fb5bb165d04a962c6bd179ff12b} 
+\index{Plazza::Reception@{Plazza::Reception}!getKitchen@{getKitchen}}
+\index{getKitchen@{getKitchen}!Plazza::Reception@{Plazza::Reception}}
+\doxysubsubsection{\texorpdfstring{getKitchen()}{getKitchen()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{Reception_8hpp_a1dd8eb0a812ae3f8b4f3240a26408962}{KITCHEN}} \& Plazza\+::\+Reception\+::get\+Kitchen (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the list of kitchens. 
+
+\begin{DoxyReturn}{Returns}
+Constant reference to the list of kitchens. 
+\end{DoxyReturn}
+\Hypertarget{classPlazza_1_1Reception_aef3497da719a785acefcf6edad59b1a4}\label{classPlazza_1_1Reception_aef3497da719a785acefcf6edad59b1a4} 
+\index{Plazza::Reception@{Plazza::Reception}!getOrders@{getOrders}}
+\index{getOrders@{getOrders}!Plazza::Reception@{Plazza::Reception}}
+\doxysubsubsection{\texorpdfstring{getOrders()}{getOrders()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Reception_8hpp_a6377235adf663ac495058e8aeaefe684}{ORDERS}} \& Plazza\+::\+Reception\+::get\+Orders (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the list of orders. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the list of orders. 
+\end{DoxyReturn}
+\Hypertarget{classPlazza_1_1Reception_aa1bb20a20ff733464086e2d55948571f}\label{classPlazza_1_1Reception_aa1bb20a20ff733464086e2d55948571f} 
+\index{Plazza::Reception@{Plazza::Reception}!parseInput@{parseInput}}
+\index{parseInput@{parseInput}!Plazza::Reception@{Plazza::Reception}}
+\doxysubsubsection{\texorpdfstring{parseInput()}{parseInput()}}
+{\footnotesize\ttfamily bool Plazza\+::\+Reception\+::parse\+Input (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Parses the input string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The input string to parse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if parsing is successful, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classPlazza_1_1Reception_ad5327d8645db2e67dbe7cb95fd1b371d}\label{classPlazza_1_1Reception_ad5327d8645db2e67dbe7cb95fd1b371d} 
+\index{Plazza::Reception@{Plazza::Reception}!Run@{Run}}
+\index{Run@{Run}!Plazza::Reception@{Plazza::Reception}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void Plazza\+::\+Reception\+::\+Run (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Runs the reception operations. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classPlazza_1_1Reception_a11f9667dd74d0c2ba3b350c38658a61e}\label{classPlazza_1_1Reception_a11f9667dd74d0c2ba3b350c38658a61e} 
+\index{Plazza::Reception@{Plazza::Reception}!activeKitchenId@{activeKitchenId}}
+\index{activeKitchenId@{activeKitchenId}!Plazza::Reception@{Plazza::Reception}}
+\doxysubsubsection{\texorpdfstring{activeKitchenId}{activeKitchenId}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ Plazza\+::\+Reception\+::active\+Kitchen\+Id}
+
+
+
+Vector of active kitchen IDs. 
+
+\Hypertarget{classPlazza_1_1Reception_adb8722da8936b80e9e3c53e42ddab859}\label{classPlazza_1_1Reception_adb8722da8936b80e9e3c53e42ddab859} 
+\index{Plazza::Reception@{Plazza::Reception}!childFd@{childFd}}
+\index{childFd@{childFd}!Plazza::Reception@{Plazza::Reception}}
+\doxysubsubsection{\texorpdfstring{childFd}{childFd}}
+{\footnotesize\ttfamily int Plazza\+::\+Reception\+::child\+Fd}
+
+
+
+Child file descriptor. 
+
+\Hypertarget{classPlazza_1_1Reception_aa35a3f48fe6b36917b8b2183bc1e81b9}\label{classPlazza_1_1Reception_aa35a3f48fe6b36917b8b2183bc1e81b9} 
+\index{Plazza::Reception@{Plazza::Reception}!cond\_vars@{cond\_vars}}
+\index{cond\_vars@{cond\_vars}!Plazza::Reception@{Plazza::Reception}}
+\doxysubsubsection{\texorpdfstring{cond\_vars}{cond\_vars}}
+{\footnotesize\ttfamily std\+::condition\+\_\+variable Plazza\+::\+Reception\+::cond\+\_\+vars}
+
+
+
+Condition variable for thread synchronization. 
+
+\Hypertarget{classPlazza_1_1Reception_a2355a4e15fe5cea50af4b488b3ddb37b}\label{classPlazza_1_1Reception_a2355a4e15fe5cea50af4b488b3ddb37b} 
+\index{Plazza::Reception@{Plazza::Reception}!kitchens@{kitchens}}
+\index{kitchens@{kitchens}!Plazza::Reception@{Plazza::Reception}}
+\doxysubsubsection{\texorpdfstring{kitchens}{kitchens}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Reception_8hpp_a1dd8eb0a812ae3f8b4f3240a26408962}{KITCHEN}} Plazza\+::\+Reception\+::kitchens}
+
+
+
+List of kitchens. 
+
+\Hypertarget{classPlazza_1_1Reception_a5f9ad7724c911eede47a9eef0023e9ad}\label{classPlazza_1_1Reception_a5f9ad7724c911eede47a9eef0023e9ad} 
+\index{Plazza::Reception@{Plazza::Reception}!kitchenThread@{kitchenThread}}
+\index{kitchenThread@{kitchenThread}!Plazza::Reception@{Plazza::Reception}}
+\doxysubsubsection{\texorpdfstring{kitchenThread}{kitchenThread}}
+{\footnotesize\ttfamily std\+::vector$<$pthread\+\_\+t$>$ Plazza\+::\+Reception\+::kitchen\+Thread}
+
+
+
+Vector of kitchen threads. 
+
+\Hypertarget{classPlazza_1_1Reception_a2bafce5ca6c826ddc785d8f17738205c}\label{classPlazza_1_1Reception_a2bafce5ca6c826ddc785d8f17738205c} 
+\index{Plazza::Reception@{Plazza::Reception}!mutex@{mutex}}
+\index{mutex@{mutex}!Plazza::Reception@{Plazza::Reception}}
+\doxysubsubsection{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily std\+::mutex Plazza\+::\+Reception\+::mutex}
+
+
+
+Mutex for thread synchronization. 
+
+\Hypertarget{classPlazza_1_1Reception_aa14ba56de701b1cdbb3ef4701713face}\label{classPlazza_1_1Reception_aa14ba56de701b1cdbb3ef4701713face} 
+\index{Plazza::Reception@{Plazza::Reception}!parentFd@{parentFd}}
+\index{parentFd@{parentFd}!Plazza::Reception@{Plazza::Reception}}
+\doxysubsubsection{\texorpdfstring{parentFd}{parentFd}}
+{\footnotesize\ttfamily int Plazza\+::\+Reception\+::parent\+Fd}
+
+
+
+Parent file descriptor. 
+
+\Hypertarget{classPlazza_1_1Reception_a1ce8190ae8583a2cbf6d5371485e1eda}\label{classPlazza_1_1Reception_a1ce8190ae8583a2cbf6d5371485e1eda} 
+\index{Plazza::Reception@{Plazza::Reception}!stop@{stop}}
+\index{stop@{stop}!Plazza::Reception@{Plazza::Reception}}
+\doxysubsubsection{\texorpdfstring{stop}{stop}}
+{\footnotesize\ttfamily bool Plazza\+::\+Reception\+::stop = false}
+
+
+
+Flag to stop the reception operations. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+includes/\mbox{\hyperlink{Reception_8hpp}{Reception.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,89 @@
+\doxysection{IPizza.\+hpp}
+\hypertarget{IPizza_8hpp_source}{}\label{IPizza_8hpp_source}\index{includes/IPizza.hpp@{includes/IPizza.hpp}}
+\mbox{\hyperlink{IPizza_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ file}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ file}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ IPIZZA\_HPP}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\ \ \ \ \#define\ IPIZZA\_HPP}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\ \ \ \ \#include\ <vector>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\ \ \ \ \#include\ <string>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\ \ \ \ \#include\ <cstdlib>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{IPizza_8hpp_a5d47f0a0d64879bbfa81d29acccd8f7d}{PizzaType}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{IPizza_8hpp_a5d47f0a0d64879bbfa81d29acccd8f7da4a339374c459be157b1be6ac7d8e6fca}{Regina}}\ =\ 1,}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{IPizza_8hpp_a5d47f0a0d64879bbfa81d29acccd8f7da4931b96b11bdae6da3be91d59f819aa9}{Margarita}}\ =\ 2,}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{IPizza_8hpp_a5d47f0a0d64879bbfa81d29acccd8f7da834b9fe6ca5e596ded348e9399913f47}{Americana}}\ =\ 4,}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{IPizza_8hpp_a5d47f0a0d64879bbfa81d29acccd8f7da9c9bb56fe192d0b403451bd1c1f8a346}{Fantasia}}\ =\ 8}
+\DoxyCodeLine{00020\ \};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{IPizza_8hpp_a991e02d6f9f475482ad89504f456730c}{BasicPizzaNameStr}}[]\ =\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{stringliteral}{"{}regina"{}},}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{stringliteral}{"{}margarita"{}},}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{stringliteral}{"{}americana"{}},}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{stringliteral}{"{}fantasia"{}}}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6}{PizzaSize}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6af1ce01387d2348f8b858721a7db81670}{S}}\ =\ 1,}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6a51ca6c63d97347ee58cc7da59ab6994b}{M}}\ =\ 2,}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6aef31cc6fe9479955961311ee18ac205f}{L}}\ =\ 4,}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6a54c9e44b3409eb9b91bf89ea1e321a73}{XL}}\ =\ 8,}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{IPizza_8hpp_a4874239e3ed6625fe4c6678ce4b997a6ab88ec4bc6eb63c7e402209d5b856d461}{XXL}}\ =\ 16}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{IPizza_8hpp_ae904090a6806bf7677850486a99b04f3}{PizzaSizeStr}}[]\ =\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{stringliteral}{"{}S"{}},}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{stringliteral}{"{}M"{}},}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{stringliteral}{"{}L"{}},}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{stringliteral}{"{}XL"{}},}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{stringliteral}{"{}XXL"{}}}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0}{Ingredients}}\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0ae2bc49dcba2d6576b9a58ef8249f4534}{Dough}}\ =\ 1,}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0ae2df97ac698e367bd5e3cad607645778}{Tomato}}\ =\ 2,}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0a32155949a447db373c7dafec306ad538}{Gruyere}}\ =\ 4,}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0a9c019fe17d2df841ab84882fd5290b4d}{Ham}}\ =\ 8,}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0aa519e7f4050ec6d486509a07163cec63}{Mushrooms}}\ =\ 16,}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0aca4357b027d8642b5db6018fd4906130}{Steak}}\ =\ 32,}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0a7606d227ad8e65a091fe88d2b2264d5d}{Eggplant}}\ =\ 64,}
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0a50f5546cf36f2fc8fc3de4e8dcef66bf}{GoatCheese}}\ =\ 128,}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0a3d6dce953272475dea58db87b16eb2e8}{ChiefLove}}\ =\ 256}
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{IPizza_8hpp_a771d5cc7af5e9b672cfecfbc894c8cc3}{PizzaIngredientsStr}}[]\ =\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{stringliteral}{"{}Dough"{}},}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{stringliteral}{"{}Tomato"{}},}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{stringliteral}{"{}Gruyere"{}},}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{stringliteral}{"{}Ham"{}},}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{stringliteral}{"{}Mushrooms"{}},}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{stringliteral}{"{}Steak"{}},}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{stringliteral}{"{}Eggplant"{}},}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{stringliteral}{"{}GoatCheese"{}},}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{stringliteral}{"{}ChiefLove"{}}}
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacePlazza}{Plazza}}}
+\DoxyCodeLine{00073\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPlazza_1_1IPizza}{IPizza}}\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classPlazza_1_1IPizza_ac650f1da9d7be2a3494027775d148cd1}{\string~IPizza}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlazza_1_1IPizza_a4418ccd5fa359e58b29de8a6858d5ae9}{getCookingTime}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{classPlazza_1_1IPizza_adc402f19f16b5f8af1167be13e8d14b3}{getName}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<Ingredients>\ \mbox{\hyperlink{classPlazza_1_1IPizza_a0715857b81fe3b12dc6a93d6952cc61b}{getIngredients}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00080\ \ \ \ \ \};}
+\DoxyCodeLine{00081\ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ IPIZZA\_HPP\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

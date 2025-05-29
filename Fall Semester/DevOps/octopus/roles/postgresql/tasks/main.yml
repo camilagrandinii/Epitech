@@ -1,0 +1,110 @@
+- name: Update apt
+  become: true
+  apt:
+    update_cache: yes
+
+- name: Upgrade apt packages
+  become: true
+  apt:
+    upgrade: dist
+
+- name: Add PostgreSQL repository to sources.list.d
+  become: true
+  shell: >
+    sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+
+- name: Add PostgreSQL apt key
+  become: true
+  shell: >
+    wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+
+- name: Update apt after adding repository and key
+  become: true
+  apt:
+    update_cache: yes
+  
+- name: Install PostgreSQL 16
+  become: true
+  command: sudo apt install postgresql-16
+
+- name: Install PostgreSQL Auxiliar Tools
+  become: true
+  apt:
+    name:
+      - libpq-dev
+      - acl
+
+- name: Install psycopg2 with pip
+  become: true
+  command: pip install psycopg2-binary --break-system-packages
+
+- name: Copy postgresql.conf
+  register: conf
+  copy:
+    src: ../files/postgresql.conf
+    dest: /etc/postgresql/16/main/postgresql.conf
+
+- name: Template pg_hba.conf
+  become: true
+  register: template
+  template:
+    src: ../files/pg_hba.conf
+    dest: /etc/postgresql/16/main/pg_hba.conf
+
+- name: Restart postgre
+  become: true
+  when: template.changed or conf.changed
+  systemd:
+    name: postgresql
+    state: restarted
+
+- name: Create PostgreSQL database from schema
+  become: true
+  become_user: postgres
+  postgresql_db:
+    name: "{{ postgresql_db }}"
+    state: present
+
+- name: Copy schema file
+  register: schema
+  copy:
+    src: ../files/schema.sql
+    dest: /tmp/schema.sql
+
+- name: Run the SQL schema to create the tables and other objects
+  become: true
+  when: schema.changed
+  postgresql_query:
+    db: "{{ postgresql_db }}"
+    query: "{{ lookup('file', '../files/schema.sql') }}"
+
+- name: PostgreSQL User creation
+  become: true
+  become_user: postgres
+  postgresql_user:
+    db: "{{ postgresql_db }}"
+    name: "{{ postgresql_user }}"
+    password: "{{ postgresql_pass }}"
+    role_attr_flags: LOGIN,NOSUPERUSER,NOCREATEDB,NOCREATEROLE
+    encrypted: yes
+    state: present
+
+- name: Grant privs to librarian and reader on database library
+  community.postgresql.postgresql_privs:
+    database: "{{ postgresql_db }}"
+    state: present
+    privs: SELECT,INSERT,UPDATE,DELETE
+    type: table
+    obj: votes
+    roles: "{{ postgresql_user }}"
+    grant_option: true
+
+- name: UFW rules
+  become: true
+  community.general.ufw:
+    rule: "allow"
+    port: "{{ item }}"
+    proto: "tcp"
+  with_items:
+    - "5432"
+    - "5433"

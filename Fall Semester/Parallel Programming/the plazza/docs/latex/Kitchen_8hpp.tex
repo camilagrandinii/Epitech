@@ -1,0 +1,47 @@
+\doxysection{includes/\+Kitchen.hpp File Reference}
+\hypertarget{Kitchen_8hpp}{}\label{Kitchen_8hpp}\index{includes/Kitchen.hpp@{includes/Kitchen.hpp}}
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$condition\+\_\+variable$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include "{}Order.\+hpp"{}}\newline
+{\ttfamily \#include "{}Plazza.\+hpp"{}}\newline
+Include dependency graph for Kitchen.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classPlazza_1_1DeltaTime}{Plazza\+::\+Delta\+Time}}
+\begin{DoxyCompactList}\small\item\em Manages time tracking for various events. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structPlazza_1_1header__t}{Plazza\+::header\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure representing the header of a message. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structPlazza_1_1statusAnswer__t}{Plazza\+::status\+Answer\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure representing the status answer message. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structPlazza_1_1order__t}{Plazza\+::order\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure representing an order message. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structPlazza_1_1pizzaDone__t}{Plazza\+::pizza\+Done\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure representing a pizza done message. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classPlazza_1_1Kitchen}{Plazza\+::\+Kitchen}}
+\begin{DoxyCompactList}\small\item\em Manages the operations of a kitchen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacePlazza}{Plazza}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacePlazza_a859e89b9d7a032d736c44973e5b2136e}{Plazza\+::\+Message\+Type}} \{ \newline
+\mbox{\hyperlink{namespacePlazza_a859e89b9d7a032d736c44973e5b2136ea0356916b239f56c9790aec2156fc51cc}{Plazza\+::status\+Request}}
+, \mbox{\hyperlink{namespacePlazza_a859e89b9d7a032d736c44973e5b2136ea43675936d307c6c2a13cfd871be8b219}{Plazza\+::status\+Answer}}
+, \mbox{\hyperlink{namespacePlazza_a859e89b9d7a032d736c44973e5b2136ea15d7208bb6dab428890273e27dccfe58}{Plazza\+::order}}
+, \mbox{\hyperlink{namespacePlazza_a859e89b9d7a032d736c44973e5b2136ea18f7c70dedcf8ece9cacb9c404bbc1b9}{Plazza\+::pizza\+Done}}
+, \newline
+\mbox{\hyperlink{namespacePlazza_a859e89b9d7a032d736c44973e5b2136eae49cf7ac646066dc0e742d9156eaecbf}{Plazza\+::kitchen\+Closing}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumerates the types of messages that can be exchanged. \end{DoxyCompactList}\end{DoxyCompactItemize}

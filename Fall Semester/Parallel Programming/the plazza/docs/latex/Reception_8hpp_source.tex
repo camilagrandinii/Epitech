@@ -1,0 +1,73 @@
+\doxysection{Reception.\+hpp}
+\hypertarget{Reception_8hpp_source}{}\label{Reception_8hpp_source}\index{includes/Reception.hpp@{includes/Reception.hpp}}
+\mbox{\hyperlink{Reception_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ file}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ file}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ RECEPTION\_HPP}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\ \ \ \ \#define\ RECEPTION\_HPP}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\ \ \ \ \#include\ <mutex>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\ \ \ \ \#include\ <thread>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\ \ \ \ \#include\ <condition\_variable>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\ \ \ \ \#include\ "{}\mbox{\hyperlink{Cook_8hpp}{Cook.hpp}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\ \ \ \ \#include\ "{}\mbox{\hyperlink{Kitchen_8hpp}{Kitchen.hpp}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\ \ \ \ \#include\ "{}\mbox{\hyperlink{Plazza_8hpp}{Plazza.hpp}}"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\ \ \ \ \#define\ FIFO\_PARENT\ "{}/tmp/fifo\_parent"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\ \ \ \ \#define\ FIFO\_CHILD\ "{}/tmp/fifo\_child"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\ \ \ \ \#define\ ORDERS\ std::vector<Plazza::Order>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\ \ \ \ \#define\ KITCHEN\ std::vector<Plazza::Kitchen>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\ \ \ \ \#define\ PIZZALIST\ std::vector<Plazza::APizza>}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacePlazza}{Plazza}}\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPlazza_1_1Reception}{Reception}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structOption}{Option}}\ option;\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{Reception_8hpp_a6377235adf663ac495058e8aeaefe684}{ORDERS}}\ orders;\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{Reception_8hpp_a5ceb89da3bfcf681c69977b5e7cbae4a}{PIZZALIST}}\ pizzaList;\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ orderNumber\ =\ 0;\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ kitchenNumber\ =\ 0;\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ pthread\_t\ thread;\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<pthread\_t>\ \mbox{\hyperlink{classPlazza_1_1Reception_a5f9ad7724c911eede47a9eef0023e9ad}{kitchenThread}};\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{Reception_8hpp_a1dd8eb0a812ae3f8b4f3240a26408962}{KITCHEN}}\ \mbox{\hyperlink{classPlazza_1_1Reception_a2355a4e15fe5cea50af4b488b3ddb37b}{kitchens}};\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlazza_1_1Reception_acf47711779928e9aeb6a5167a5d87e28}{Reception}}(\mbox{\hyperlink{structOption}{Option}}\ \&option,\ \mbox{\hyperlink{Reception_8hpp_a5ceb89da3bfcf681c69977b5e7cbae4a}{PIZZALIST}}\ \&pizzaList);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlazza_1_1Reception_a44163f32bbcc8404691c7216e70a56b1}{\string~Reception}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlazza_1_1Reception_aa61c390bac4350b19b1747231731e251}{findAKitchen}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPlazza_1_1Reception_ad5327d8645db2e67dbe7cb95fd1b371d}{Run}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPlazza_1_1Reception_a53edb7a66960be695c7f51eb1b305e78}{assignOrderToKitchen}}(\mbox{\hyperlink{Order_8hpp_a5139755bc3942802633abb63aea9faa4}{PIZZAORDER}}\ \&\mbox{\hyperlink{namespacePlazza_a859e89b9d7a032d736c44973e5b2136ea15d7208bb6dab428890273e27dccfe58}{order}});}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{Reception_8hpp_a6377235adf663ac495058e8aeaefe684}{ORDERS}}\ \&\mbox{\hyperlink{classPlazza_1_1Reception_aef3497da719a785acefcf6edad59b1a4}{getOrders}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{Reception_8hpp_a1dd8eb0a812ae3f8b4f3240a26408962}{KITCHEN}}\ \&\mbox{\hyperlink{classPlazza_1_1Reception_a45a36fb5bb165d04a962c6bd179ff12b}{getKitchen}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classPlazza_1_1Reception_aa1bb20a20ff733464086e2d55948571f}{parseInput}}(\textcolor{keyword}{const}\ std::string\ \&str);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ std::mutex\ \mbox{\hyperlink{classPlazza_1_1Reception_a2bafce5ca6c826ddc785d8f17738205c}{mutex}};\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ std::condition\_variable\ \mbox{\hyperlink{classPlazza_1_1Reception_aa35a3f48fe6b36917b8b2183bc1e81b9}{cond\_vars}};\ }
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlazza_1_1Reception_aa14ba56de701b1cdbb3ef4701713face}{parentFd}};\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPlazza_1_1Reception_adb8722da8936b80e9e3c53e42ddab859}{childFd}};\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<int>\ \mbox{\hyperlink{classPlazza_1_1Reception_a11f9667dd74d0c2ba3b350c38658a61e}{activeKitchenId}};\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classPlazza_1_1Reception_a1ce8190ae8583a2cbf6d5371485e1eda}{stop}}\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00098\ \ \ \ \ \};}
+\DoxyCodeLine{00099\ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ std::vector<Plazza::APizza>\ \mbox{\hyperlink{Reception_8hpp_aa5dfedb7fbe906b74189c8dc83e006ad}{parseConfigurationFile}}(std::filesystem::path\ pathToConfFile);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ RECEPTION\_HPP\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

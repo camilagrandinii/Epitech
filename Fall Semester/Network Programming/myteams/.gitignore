@@ -1,0 +1,6 @@
+*.o
+coding-style-reports.log
+.vscode
+tmp
+helpFiles
+libmyteams.so

@@ -1,0 +1,92 @@
+\doxysection{includes/\+Reception.hpp File Reference}
+\hypertarget{Reception_8hpp}{}\label{Reception_8hpp}\index{includes/Reception.hpp@{includes/Reception.hpp}}
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$condition\+\_\+variable$>$}\newline
+{\ttfamily \#include "{}Cook.\+hpp"{}}\newline
+{\ttfamily \#include "{}Kitchen.\+hpp"{}}\newline
+{\ttfamily \#include "{}Plazza.\+hpp"{}}\newline
+Include dependency graph for Reception.\+hpp\+:
+% FIG 0
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classPlazza_1_1Reception}{Plazza\+::\+Reception}}
+\begin{DoxyCompactList}\small\item\em Manages the reception and distribution of pizza orders to various kitchens. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacePlazza}{Plazza}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{Reception_8hpp_a94fae5d7d6e57e8e7e1b6376c44f9b9c}{FIFO\+\_\+\+PARENT}}~"{}/tmp/fifo\+\_\+parent"{}
+\item 
+\#define \mbox{\hyperlink{Reception_8hpp_a6c1e189fcfd7c3d62714040cf27e5596}{FIFO\+\_\+\+CHILD}}~"{}/tmp/fifo\+\_\+child"{}
+\item 
+\#define \mbox{\hyperlink{Reception_8hpp_a6377235adf663ac495058e8aeaefe684}{ORDERS}}~std\+::vector$<$\mbox{\hyperlink{classPlazza_1_1Order}{Plazza\+::\+Order}}$>$
+\item 
+\#define \mbox{\hyperlink{Reception_8hpp_a1dd8eb0a812ae3f8b4f3240a26408962}{KITCHEN}}~std\+::vector$<$\mbox{\hyperlink{classPlazza_1_1Kitchen}{Plazza\+::\+Kitchen}}$>$
+\item 
+\#define \mbox{\hyperlink{Reception_8hpp_a5ceb89da3bfcf681c69977b5e7cbae4a}{PIZZALIST}}~std\+::vector$<$\mbox{\hyperlink{classPlazza_1_1APizza}{Plazza\+::\+APizza}}$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classPlazza_1_1APizza}{Plazza\+::\+APizza}} $>$ \mbox{\hyperlink{Reception_8hpp_aa5dfedb7fbe906b74189c8dc83e006ad}{parse\+Configuration\+File}} (std\+::filesystem\+::path path\+To\+Conf\+File)
+\begin{DoxyCompactList}\small\item\em Parses the configuration file to get a list of available pizzas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{Reception_8hpp_a6c1e189fcfd7c3d62714040cf27e5596}\label{Reception_8hpp_a6c1e189fcfd7c3d62714040cf27e5596} 
+\index{Reception.hpp@{Reception.hpp}!FIFO\_CHILD@{FIFO\_CHILD}}
+\index{FIFO\_CHILD@{FIFO\_CHILD}!Reception.hpp@{Reception.hpp}}
+\doxysubsubsection{\texorpdfstring{FIFO\_CHILD}{FIFO\_CHILD}}
+{\footnotesize\ttfamily \#define FIFO\+\_\+\+CHILD~"{}/tmp/fifo\+\_\+child"{}}
+
+\Hypertarget{Reception_8hpp_a94fae5d7d6e57e8e7e1b6376c44f9b9c}\label{Reception_8hpp_a94fae5d7d6e57e8e7e1b6376c44f9b9c} 
+\index{Reception.hpp@{Reception.hpp}!FIFO\_PARENT@{FIFO\_PARENT}}
+\index{FIFO\_PARENT@{FIFO\_PARENT}!Reception.hpp@{Reception.hpp}}
+\doxysubsubsection{\texorpdfstring{FIFO\_PARENT}{FIFO\_PARENT}}
+{\footnotesize\ttfamily \#define FIFO\+\_\+\+PARENT~"{}/tmp/fifo\+\_\+parent"{}}
+
+\Hypertarget{Reception_8hpp_a1dd8eb0a812ae3f8b4f3240a26408962}\label{Reception_8hpp_a1dd8eb0a812ae3f8b4f3240a26408962} 
+\index{Reception.hpp@{Reception.hpp}!KITCHEN@{KITCHEN}}
+\index{KITCHEN@{KITCHEN}!Reception.hpp@{Reception.hpp}}
+\doxysubsubsection{\texorpdfstring{KITCHEN}{KITCHEN}}
+{\footnotesize\ttfamily \#define KITCHEN~std\+::vector$<$\mbox{\hyperlink{classPlazza_1_1Kitchen}{Plazza\+::\+Kitchen}}$>$}
+
+\Hypertarget{Reception_8hpp_a6377235adf663ac495058e8aeaefe684}\label{Reception_8hpp_a6377235adf663ac495058e8aeaefe684} 
+\index{Reception.hpp@{Reception.hpp}!ORDERS@{ORDERS}}
+\index{ORDERS@{ORDERS}!Reception.hpp@{Reception.hpp}}
+\doxysubsubsection{\texorpdfstring{ORDERS}{ORDERS}}
+{\footnotesize\ttfamily \#define ORDERS~std\+::vector$<$\mbox{\hyperlink{classPlazza_1_1Order}{Plazza\+::\+Order}}$>$}
+
+\Hypertarget{Reception_8hpp_a5ceb89da3bfcf681c69977b5e7cbae4a}\label{Reception_8hpp_a5ceb89da3bfcf681c69977b5e7cbae4a} 
+\index{Reception.hpp@{Reception.hpp}!PIZZALIST@{PIZZALIST}}
+\index{PIZZALIST@{PIZZALIST}!Reception.hpp@{Reception.hpp}}
+\doxysubsubsection{\texorpdfstring{PIZZALIST}{PIZZALIST}}
+{\footnotesize\ttfamily \#define PIZZALIST~std\+::vector$<$\mbox{\hyperlink{classPlazza_1_1APizza}{Plazza\+::\+APizza}}$>$}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{Reception_8hpp_aa5dfedb7fbe906b74189c8dc83e006ad}\label{Reception_8hpp_aa5dfedb7fbe906b74189c8dc83e006ad} 
+\index{Reception.hpp@{Reception.hpp}!parseConfigurationFile@{parseConfigurationFile}}
+\index{parseConfigurationFile@{parseConfigurationFile}!Reception.hpp@{Reception.hpp}}
+\doxysubsubsection{\texorpdfstring{parseConfigurationFile()}{parseConfigurationFile()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classPlazza_1_1APizza}{Plazza\+::\+APizza}} $>$ parse\+Configuration\+File (\begin{DoxyParamCaption}\item[{std\+::filesystem\+::path}]{path\+To\+Conf\+File }\end{DoxyParamCaption})}
+
+
+
+Parses the configuration file to get a list of available pizzas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path\+To\+Conf\+File} & The path to the configuration file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of available pizzas. 
+\end{DoxyReturn}

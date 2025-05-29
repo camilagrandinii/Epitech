@@ -1,0 +1,260 @@
+\doxysection{Plazza\+::Kitchen Class Reference}
+\hypertarget{classPlazza_1_1Kitchen}{}\label{classPlazza_1_1Kitchen}\index{Plazza::Kitchen@{Plazza::Kitchen}}
+
+
+Manages the operations of a kitchen.  
+
+
+
+
+{\ttfamily \#include $<$Kitchen.\+hpp$>$}
+
+
+
+Collaboration diagram for Plazza\+::Kitchen\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlazza_1_1Kitchen_a0df55fd1c14757fd8c5ffba4ff10c28a}{Kitchen}} (\mbox{\hyperlink{structOption}{Option}} \&option, int cfd, int pfd, int id, std\+::string \mbox{\hyperlink{classPlazza_1_1Kitchen_a728a4341f0088337d74e678aa8b9de55}{pizza\+Name}}, int \mbox{\hyperlink{classPlazza_1_1Kitchen_a88c3b2f9ca3797af9edc4946856656ad}{cooking\+Time}}, int \mbox{\hyperlink{classPlazza_1_1Kitchen_ad4db6763c14be0d5693c3e0b8fa2f37e}{order\+Id}})
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{classPlazza_1_1Kitchen}{Kitchen} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlazza_1_1Kitchen_aee1b864e26a945c89c72282f0ad64cf9}{\texorpdfstring{$\sim$}{\string~}\+Kitchen}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classPlazza_1_1Kitchen}{Kitchen} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlazza_1_1Kitchen_a3d4716059d15672f0147a12e0341b5db}{Kitchen}} (const \mbox{\hyperlink{classPlazza_1_1Kitchen}{Kitchen}} \&other)
+\begin{DoxyCompactList}\small\item\em Custom copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlazza_1_1Kitchen}{Kitchen}} \& \mbox{\hyperlink{classPlazza_1_1Kitchen_aaeabca682500d2779fcd2fb5c47af0ac}{operator=}} (const \mbox{\hyperlink{classPlazza_1_1Kitchen}{Kitchen}} \&other)
+\begin{DoxyCompactList}\small\item\em Custom copy assignment operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classPlazza_1_1Kitchen_a728a4341f0088337d74e678aa8b9de55}{pizza\+Name}}
+\begin{DoxyCompactList}\small\item\em Name of the pizza. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlazza_1_1DeltaTime}{Delta\+Time}} \mbox{\hyperlink{classPlazza_1_1Kitchen_a262a7f53bfac0f54cbf9103192cfc1f9}{time}}
+\begin{DoxyCompactList}\small\item\em Time tracking for the kitchen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPlazza_1_1Kitchen_a88c3b2f9ca3797af9edc4946856656ad}{cooking\+Time}}
+\begin{DoxyCompactList}\small\item\em Time required for cooking. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPlazza_1_1Kitchen_ad4db6763c14be0d5693c3e0b8fa2f37e}{order\+Id}}
+\begin{DoxyCompactList}\small\item\em ID of the order. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPlazza_1_1Kitchen_a1bb01690c3a965b776716355680756b5}{cook\+Occupied}} = 0
+\begin{DoxyCompactList}\small\item\em Number of cooks occupied. \end{DoxyCompactList}\item 
+std\+::map$<$ \mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0}{Ingredients}}, int $>$ \mbox{\hyperlink{classPlazza_1_1Kitchen_a214957c155275fdbce61d1fce125a503}{ingredients}}
+\begin{DoxyCompactList}\small\item\em Ingredients available in the kitchen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPlazza_1_1Kitchen_af5b8f1015b4d81ee59b8f2da49edfcec}{child\+Fd}}
+\begin{DoxyCompactList}\small\item\em Child file descriptor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPlazza_1_1Kitchen_a5e4e9bfa3353035ddb63f39398d1b3d1}{parent\+Fd}}
+\begin{DoxyCompactList}\small\item\em Parent file descriptor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPlazza_1_1Kitchen_a06aac8c82b3bfccba3473578483bd813}{kitchen\+Id}}
+\begin{DoxyCompactList}\small\item\em ID of the kitchen. \end{DoxyCompactList}\item 
+pthread\+\_\+t \mbox{\hyperlink{classPlazza_1_1Kitchen_ac9d744b2eeb3c2023324beaac435edb0}{thread}}
+\begin{DoxyCompactList}\small\item\em Thread for the kitchen operations. \end{DoxyCompactList}\item 
+std\+::mutex \mbox{\hyperlink{classPlazza_1_1Kitchen_ab3661112f48cb8f0d8b097a6041bdf30}{mutex}}
+\begin{DoxyCompactList}\small\item\em Mutex for thread synchronization. \end{DoxyCompactList}\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{classPlazza_1_1Kitchen_a19a7daa1ad28bc05c1f3df128e65480b}{cond\+\_\+vars}}
+\begin{DoxyCompactList}\small\item\em Condition variable for thread synchronization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the operations of a kitchen. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPlazza_1_1Kitchen_a0df55fd1c14757fd8c5ffba4ff10c28a}\label{classPlazza_1_1Kitchen_a0df55fd1c14757fd8c5ffba4ff10c28a} 
+\index{Plazza::Kitchen@{Plazza::Kitchen}!Kitchen@{Kitchen}}
+\index{Kitchen@{Kitchen}!Plazza::Kitchen@{Plazza::Kitchen}}
+\doxysubsubsection{\texorpdfstring{Kitchen()}{Kitchen()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Plazza\+::\+Kitchen\+::\+Kitchen (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structOption}{Option}} \&}]{option,  }\item[{int}]{cfd,  }\item[{int}]{pfd,  }\item[{int}]{id,  }\item[{std\+::string}]{pizza\+Name,  }\item[{int}]{cooking\+Time,  }\item[{int}]{order\+Id }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{classPlazza_1_1Kitchen}{Kitchen} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & Reference to the \doxylink{structOption}{Option} object. \\
+\hline
+{\em cfd} & Child file descriptor. \\
+\hline
+{\em pfd} & Parent file descriptor. \\
+\hline
+{\em id} & ID of the kitchen. \\
+\hline
+{\em pizza\+Name} & Name of the pizza. \\
+\hline
+{\em cooking\+Time} & Time required for cooking. \\
+\hline
+{\em order\+Id} & ID of the order. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classPlazza_1_1Kitchen_aee1b864e26a945c89c72282f0ad64cf9}\label{classPlazza_1_1Kitchen_aee1b864e26a945c89c72282f0ad64cf9} 
+\index{Plazza::Kitchen@{Plazza::Kitchen}!````~Kitchen@{\texorpdfstring{$\sim$}{\string~}Kitchen}}
+\index{````~Kitchen@{\texorpdfstring{$\sim$}{\string~}Kitchen}!Plazza::Kitchen@{Plazza::Kitchen}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Kitchen()}{\string~Kitchen()}}
+{\footnotesize\ttfamily Plazza\+::\+Kitchen\+::\texorpdfstring{$\sim$}{\string~}\+Kitchen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for the \doxylink{classPlazza_1_1Kitchen}{Kitchen} class. 
+
+\Hypertarget{classPlazza_1_1Kitchen_a3d4716059d15672f0147a12e0341b5db}\label{classPlazza_1_1Kitchen_a3d4716059d15672f0147a12e0341b5db} 
+\index{Plazza::Kitchen@{Plazza::Kitchen}!Kitchen@{Kitchen}}
+\index{Kitchen@{Kitchen}!Plazza::Kitchen@{Plazza::Kitchen}}
+\doxysubsubsection{\texorpdfstring{Kitchen()}{Kitchen()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Plazza\+::\+Kitchen\+::\+Kitchen (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPlazza_1_1Kitchen}{Kitchen}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Custom copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \doxylink{classPlazza_1_1Kitchen}{Kitchen} object to copy from. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPlazza_1_1Kitchen_aaeabca682500d2779fcd2fb5c47af0ac}\label{classPlazza_1_1Kitchen_aaeabca682500d2779fcd2fb5c47af0ac} 
+\index{Plazza::Kitchen@{Plazza::Kitchen}!operator=@{operator=}}
+\index{operator=@{operator=}!Plazza::Kitchen@{Plazza::Kitchen}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlazza_1_1Kitchen}{Kitchen}} \& Plazza\+::\+Kitchen\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPlazza_1_1Kitchen}{Kitchen}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Custom copy assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \doxylink{classPlazza_1_1Kitchen}{Kitchen} object to copy from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the assigned \doxylink{classPlazza_1_1Kitchen}{Kitchen} object. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classPlazza_1_1Kitchen_af5b8f1015b4d81ee59b8f2da49edfcec}\label{classPlazza_1_1Kitchen_af5b8f1015b4d81ee59b8f2da49edfcec} 
+\index{Plazza::Kitchen@{Plazza::Kitchen}!childFd@{childFd}}
+\index{childFd@{childFd}!Plazza::Kitchen@{Plazza::Kitchen}}
+\doxysubsubsection{\texorpdfstring{childFd}{childFd}}
+{\footnotesize\ttfamily int Plazza\+::\+Kitchen\+::child\+Fd}
+
+
+
+Child file descriptor. 
+
+\Hypertarget{classPlazza_1_1Kitchen_a19a7daa1ad28bc05c1f3df128e65480b}\label{classPlazza_1_1Kitchen_a19a7daa1ad28bc05c1f3df128e65480b} 
+\index{Plazza::Kitchen@{Plazza::Kitchen}!cond\_vars@{cond\_vars}}
+\index{cond\_vars@{cond\_vars}!Plazza::Kitchen@{Plazza::Kitchen}}
+\doxysubsubsection{\texorpdfstring{cond\_vars}{cond\_vars}}
+{\footnotesize\ttfamily std\+::condition\+\_\+variable Plazza\+::\+Kitchen\+::cond\+\_\+vars}
+
+
+
+Condition variable for thread synchronization. 
+
+\Hypertarget{classPlazza_1_1Kitchen_a88c3b2f9ca3797af9edc4946856656ad}\label{classPlazza_1_1Kitchen_a88c3b2f9ca3797af9edc4946856656ad} 
+\index{Plazza::Kitchen@{Plazza::Kitchen}!cookingTime@{cookingTime}}
+\index{cookingTime@{cookingTime}!Plazza::Kitchen@{Plazza::Kitchen}}
+\doxysubsubsection{\texorpdfstring{cookingTime}{cookingTime}}
+{\footnotesize\ttfamily int Plazza\+::\+Kitchen\+::cooking\+Time}
+
+
+
+Time required for cooking. 
+
+\Hypertarget{classPlazza_1_1Kitchen_a1bb01690c3a965b776716355680756b5}\label{classPlazza_1_1Kitchen_a1bb01690c3a965b776716355680756b5} 
+\index{Plazza::Kitchen@{Plazza::Kitchen}!cookOccupied@{cookOccupied}}
+\index{cookOccupied@{cookOccupied}!Plazza::Kitchen@{Plazza::Kitchen}}
+\doxysubsubsection{\texorpdfstring{cookOccupied}{cookOccupied}}
+{\footnotesize\ttfamily int Plazza\+::\+Kitchen\+::cook\+Occupied = 0}
+
+
+
+Number of cooks occupied. 
+
+\Hypertarget{classPlazza_1_1Kitchen_a214957c155275fdbce61d1fce125a503}\label{classPlazza_1_1Kitchen_a214957c155275fdbce61d1fce125a503} 
+\index{Plazza::Kitchen@{Plazza::Kitchen}!ingredients@{ingredients}}
+\index{ingredients@{ingredients}!Plazza::Kitchen@{Plazza::Kitchen}}
+\doxysubsubsection{\texorpdfstring{ingredients}{ingredients}}
+{\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{IPizza_8hpp_a609dc38695cd4fa21b37e963c7872bd0}{Ingredients}}, int$>$ Plazza\+::\+Kitchen\+::ingredients}
+
+
+
+Ingredients available in the kitchen. 
+
+\Hypertarget{classPlazza_1_1Kitchen_a06aac8c82b3bfccba3473578483bd813}\label{classPlazza_1_1Kitchen_a06aac8c82b3bfccba3473578483bd813} 
+\index{Plazza::Kitchen@{Plazza::Kitchen}!kitchenId@{kitchenId}}
+\index{kitchenId@{kitchenId}!Plazza::Kitchen@{Plazza::Kitchen}}
+\doxysubsubsection{\texorpdfstring{kitchenId}{kitchenId}}
+{\footnotesize\ttfamily int Plazza\+::\+Kitchen\+::kitchen\+Id}
+
+
+
+ID of the kitchen. 
+
+\Hypertarget{classPlazza_1_1Kitchen_ab3661112f48cb8f0d8b097a6041bdf30}\label{classPlazza_1_1Kitchen_ab3661112f48cb8f0d8b097a6041bdf30} 
+\index{Plazza::Kitchen@{Plazza::Kitchen}!mutex@{mutex}}
+\index{mutex@{mutex}!Plazza::Kitchen@{Plazza::Kitchen}}
+\doxysubsubsection{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily std\+::mutex Plazza\+::\+Kitchen\+::mutex}
+
+
+
+Mutex for thread synchronization. 
+
+\Hypertarget{classPlazza_1_1Kitchen_ad4db6763c14be0d5693c3e0b8fa2f37e}\label{classPlazza_1_1Kitchen_ad4db6763c14be0d5693c3e0b8fa2f37e} 
+\index{Plazza::Kitchen@{Plazza::Kitchen}!orderId@{orderId}}
+\index{orderId@{orderId}!Plazza::Kitchen@{Plazza::Kitchen}}
+\doxysubsubsection{\texorpdfstring{orderId}{orderId}}
+{\footnotesize\ttfamily int Plazza\+::\+Kitchen\+::order\+Id}
+
+
+
+ID of the order. 
+
+\Hypertarget{classPlazza_1_1Kitchen_a5e4e9bfa3353035ddb63f39398d1b3d1}\label{classPlazza_1_1Kitchen_a5e4e9bfa3353035ddb63f39398d1b3d1} 
+\index{Plazza::Kitchen@{Plazza::Kitchen}!parentFd@{parentFd}}
+\index{parentFd@{parentFd}!Plazza::Kitchen@{Plazza::Kitchen}}
+\doxysubsubsection{\texorpdfstring{parentFd}{parentFd}}
+{\footnotesize\ttfamily int Plazza\+::\+Kitchen\+::parent\+Fd}
+
+
+
+Parent file descriptor. 
+
+\Hypertarget{classPlazza_1_1Kitchen_a728a4341f0088337d74e678aa8b9de55}\label{classPlazza_1_1Kitchen_a728a4341f0088337d74e678aa8b9de55} 
+\index{Plazza::Kitchen@{Plazza::Kitchen}!pizzaName@{pizzaName}}
+\index{pizzaName@{pizzaName}!Plazza::Kitchen@{Plazza::Kitchen}}
+\doxysubsubsection{\texorpdfstring{pizzaName}{pizzaName}}
+{\footnotesize\ttfamily std\+::string Plazza\+::\+Kitchen\+::pizza\+Name}
+
+
+
+Name of the pizza. 
+
+\Hypertarget{classPlazza_1_1Kitchen_ac9d744b2eeb3c2023324beaac435edb0}\label{classPlazza_1_1Kitchen_ac9d744b2eeb3c2023324beaac435edb0} 
+\index{Plazza::Kitchen@{Plazza::Kitchen}!thread@{thread}}
+\index{thread@{thread}!Plazza::Kitchen@{Plazza::Kitchen}}
+\doxysubsubsection{\texorpdfstring{thread}{thread}}
+{\footnotesize\ttfamily pthread\+\_\+t Plazza\+::\+Kitchen\+::thread}
+
+
+
+Thread for the kitchen operations. 
+
+\Hypertarget{classPlazza_1_1Kitchen_a262a7f53bfac0f54cbf9103192cfc1f9}\label{classPlazza_1_1Kitchen_a262a7f53bfac0f54cbf9103192cfc1f9} 
+\index{Plazza::Kitchen@{Plazza::Kitchen}!time@{time}}
+\index{time@{time}!Plazza::Kitchen@{Plazza::Kitchen}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlazza_1_1DeltaTime}{Delta\+Time}} Plazza\+::\+Kitchen\+::time}
+
+
+
+Time tracking for the kitchen. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+includes/\mbox{\hyperlink{Kitchen_8hpp}{Kitchen.\+hpp}}\end{DoxyCompactItemize}

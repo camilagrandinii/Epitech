@@ -1,0 +1,14 @@
+# Project-related settings
+PROJECT_NAME           = "PLAZZA"
+OUTPUT_DIRECTORY       = docs
+INPUT                  = includes
+RECURSIVE              = YES
+
+# Documentation formats
+GENERATE_HTML          = YES
+GENERATE_LATEX         = YES
+
+# Additional settings
+EXTRACT_ALL            = YES
+QUIET                  = YES
+WARNINGS               = YES

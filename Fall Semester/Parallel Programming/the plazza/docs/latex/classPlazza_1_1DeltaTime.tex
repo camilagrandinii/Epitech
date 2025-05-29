@@ -1,0 +1,154 @@
+\doxysection{Plazza\+::Delta\+Time Class Reference}
+\hypertarget{classPlazza_1_1DeltaTime}{}\label{classPlazza_1_1DeltaTime}\index{Plazza::DeltaTime@{Plazza::DeltaTime}}
+
+
+Manages time tracking for various events.  
+
+
+
+
+{\ttfamily \#include $<$Kitchen.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlazza_1_1DeltaTime_a23a26bbaa0199e26c6598da748b46658}{Delta\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{classPlazza_1_1DeltaTime}{Delta\+Time}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlazza_1_1DeltaTime_a32e6301dab077a04e4b0ecd5ffed246f}{\texorpdfstring{$\sim$}{\string~}\+Delta\+Time}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor for \doxylink{classPlazza_1_1DeltaTime}{Delta\+Time}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlazza_1_1DeltaTime_a82ff9ff12a8738dc16cce6a6378b7b91}{update\+AFKTime}} ()
+\begin{DoxyCompactList}\small\item\em Updates the current AFK time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlazza_1_1DeltaTime_a7bcdd53b5b1866769d437f35f2005a9f}{reset\+AFKTime}} ()
+\begin{DoxyCompactList}\small\item\em Resets the AFK time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlazza_1_1DeltaTime_a2d4f86672ac3558cb22a10072173f8ee}{update\+Ingredients\+Regen}} ()
+\begin{DoxyCompactList}\small\item\em Updates the ingredients regeneration time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlazza_1_1DeltaTime_af8037ae2009032ddc647f8aea2529cb5}{reset\+Ingredients\+Regen}} ()
+\begin{DoxyCompactList}\small\item\em Resets the ingredients regeneration time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::time\+\_\+t \mbox{\hyperlink{classPlazza_1_1DeltaTime_af1910a7d7a2f560cf25da8665e54a3af}{afk}}
+\begin{DoxyCompactList}\small\item\em AFK start time. \end{DoxyCompactList}\item 
+std\+::time\+\_\+t \mbox{\hyperlink{classPlazza_1_1DeltaTime_a79547d9047c4f0f1f20fcad36fabfe04}{afk\+\_\+c}}
+\begin{DoxyCompactList}\small\item\em AFK current time. \end{DoxyCompactList}\item 
+std\+::time\+\_\+t \mbox{\hyperlink{classPlazza_1_1DeltaTime_a394613726b6829dca0ea411159a2c343}{ingredients\+Regen}}
+\begin{DoxyCompactList}\small\item\em Ingredients regeneration start time. \end{DoxyCompactList}\item 
+std\+::time\+\_\+t \mbox{\hyperlink{classPlazza_1_1DeltaTime_a0d98ab5972f4905bb3c5c146647dd9d4}{ingredients\+Regen\+\_\+c}}
+\begin{DoxyCompactList}\small\item\em Ingredients regeneration current time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages time tracking for various events. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPlazza_1_1DeltaTime_a23a26bbaa0199e26c6598da748b46658}\label{classPlazza_1_1DeltaTime_a23a26bbaa0199e26c6598da748b46658} 
+\index{Plazza::DeltaTime@{Plazza::DeltaTime}!DeltaTime@{DeltaTime}}
+\index{DeltaTime@{DeltaTime}!Plazza::DeltaTime@{Plazza::DeltaTime}}
+\doxysubsubsection{\texorpdfstring{DeltaTime()}{DeltaTime()}}
+{\footnotesize\ttfamily Plazza\+::\+Delta\+Time\+::\+Delta\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{classPlazza_1_1DeltaTime}{Delta\+Time}. 
+
+\Hypertarget{classPlazza_1_1DeltaTime_a32e6301dab077a04e4b0ecd5ffed246f}\label{classPlazza_1_1DeltaTime_a32e6301dab077a04e4b0ecd5ffed246f} 
+\index{Plazza::DeltaTime@{Plazza::DeltaTime}!````~DeltaTime@{\texorpdfstring{$\sim$}{\string~}DeltaTime}}
+\index{````~DeltaTime@{\texorpdfstring{$\sim$}{\string~}DeltaTime}!Plazza::DeltaTime@{Plazza::DeltaTime}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}DeltaTime()}{\string~DeltaTime()}}
+{\footnotesize\ttfamily Plazza\+::\+Delta\+Time\+::\texorpdfstring{$\sim$}{\string~}\+Delta\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default destructor for \doxylink{classPlazza_1_1DeltaTime}{Delta\+Time}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPlazza_1_1DeltaTime_a7bcdd53b5b1866769d437f35f2005a9f}\label{classPlazza_1_1DeltaTime_a7bcdd53b5b1866769d437f35f2005a9f} 
+\index{Plazza::DeltaTime@{Plazza::DeltaTime}!resetAFKTime@{resetAFKTime}}
+\index{resetAFKTime@{resetAFKTime}!Plazza::DeltaTime@{Plazza::DeltaTime}}
+\doxysubsubsection{\texorpdfstring{resetAFKTime()}{resetAFKTime()}}
+{\footnotesize\ttfamily void Plazza\+::\+Delta\+Time\+::reset\+AFKTime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Resets the AFK time. 
+
+\Hypertarget{classPlazza_1_1DeltaTime_af8037ae2009032ddc647f8aea2529cb5}\label{classPlazza_1_1DeltaTime_af8037ae2009032ddc647f8aea2529cb5} 
+\index{Plazza::DeltaTime@{Plazza::DeltaTime}!resetIngredientsRegen@{resetIngredientsRegen}}
+\index{resetIngredientsRegen@{resetIngredientsRegen}!Plazza::DeltaTime@{Plazza::DeltaTime}}
+\doxysubsubsection{\texorpdfstring{resetIngredientsRegen()}{resetIngredientsRegen()}}
+{\footnotesize\ttfamily void Plazza\+::\+Delta\+Time\+::reset\+Ingredients\+Regen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets the ingredients regeneration time. 
+
+\Hypertarget{classPlazza_1_1DeltaTime_a82ff9ff12a8738dc16cce6a6378b7b91}\label{classPlazza_1_1DeltaTime_a82ff9ff12a8738dc16cce6a6378b7b91} 
+\index{Plazza::DeltaTime@{Plazza::DeltaTime}!updateAFKTime@{updateAFKTime}}
+\index{updateAFKTime@{updateAFKTime}!Plazza::DeltaTime@{Plazza::DeltaTime}}
+\doxysubsubsection{\texorpdfstring{updateAFKTime()}{updateAFKTime()}}
+{\footnotesize\ttfamily void Plazza\+::\+Delta\+Time\+::update\+AFKTime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the current AFK time. 
+
+\Hypertarget{classPlazza_1_1DeltaTime_a2d4f86672ac3558cb22a10072173f8ee}\label{classPlazza_1_1DeltaTime_a2d4f86672ac3558cb22a10072173f8ee} 
+\index{Plazza::DeltaTime@{Plazza::DeltaTime}!updateIngredientsRegen@{updateIngredientsRegen}}
+\index{updateIngredientsRegen@{updateIngredientsRegen}!Plazza::DeltaTime@{Plazza::DeltaTime}}
+\doxysubsubsection{\texorpdfstring{updateIngredientsRegen()}{updateIngredientsRegen()}}
+{\footnotesize\ttfamily void Plazza\+::\+Delta\+Time\+::update\+Ingredients\+Regen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the ingredients regeneration time. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classPlazza_1_1DeltaTime_af1910a7d7a2f560cf25da8665e54a3af}\label{classPlazza_1_1DeltaTime_af1910a7d7a2f560cf25da8665e54a3af} 
+\index{Plazza::DeltaTime@{Plazza::DeltaTime}!afk@{afk}}
+\index{afk@{afk}!Plazza::DeltaTime@{Plazza::DeltaTime}}
+\doxysubsubsection{\texorpdfstring{afk}{afk}}
+{\footnotesize\ttfamily std\+::time\+\_\+t Plazza\+::\+Delta\+Time\+::afk}
+
+
+
+AFK start time. 
+
+\Hypertarget{classPlazza_1_1DeltaTime_a79547d9047c4f0f1f20fcad36fabfe04}\label{classPlazza_1_1DeltaTime_a79547d9047c4f0f1f20fcad36fabfe04} 
+\index{Plazza::DeltaTime@{Plazza::DeltaTime}!afk\_c@{afk\_c}}
+\index{afk\_c@{afk\_c}!Plazza::DeltaTime@{Plazza::DeltaTime}}
+\doxysubsubsection{\texorpdfstring{afk\_c}{afk\_c}}
+{\footnotesize\ttfamily std\+::time\+\_\+t Plazza\+::\+Delta\+Time\+::afk\+\_\+c}
+
+
+
+AFK current time. 
+
+\Hypertarget{classPlazza_1_1DeltaTime_a394613726b6829dca0ea411159a2c343}\label{classPlazza_1_1DeltaTime_a394613726b6829dca0ea411159a2c343} 
+\index{Plazza::DeltaTime@{Plazza::DeltaTime}!ingredientsRegen@{ingredientsRegen}}
+\index{ingredientsRegen@{ingredientsRegen}!Plazza::DeltaTime@{Plazza::DeltaTime}}
+\doxysubsubsection{\texorpdfstring{ingredientsRegen}{ingredientsRegen}}
+{\footnotesize\ttfamily std\+::time\+\_\+t Plazza\+::\+Delta\+Time\+::ingredients\+Regen}
+
+
+
+Ingredients regeneration start time. 
+
+\Hypertarget{classPlazza_1_1DeltaTime_a0d98ab5972f4905bb3c5c146647dd9d4}\label{classPlazza_1_1DeltaTime_a0d98ab5972f4905bb3c5c146647dd9d4} 
+\index{Plazza::DeltaTime@{Plazza::DeltaTime}!ingredientsRegen\_c@{ingredientsRegen\_c}}
+\index{ingredientsRegen\_c@{ingredientsRegen\_c}!Plazza::DeltaTime@{Plazza::DeltaTime}}
+\doxysubsubsection{\texorpdfstring{ingredientsRegen\_c}{ingredientsRegen\_c}}
+{\footnotesize\ttfamily std\+::time\+\_\+t Plazza\+::\+Delta\+Time\+::ingredients\+Regen\+\_\+c}
+
+
+
+Ingredients regeneration current time. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+includes/\mbox{\hyperlink{Kitchen_8hpp}{Kitchen.\+hpp}}\end{DoxyCompactItemize}
